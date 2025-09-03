@@ -3,593 +3,380 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DEMI - Automobili</title>
+    <title>DEMI Motors</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="immagini/logo.jpeg" type="image/x-icon">
 </head>
 <body>
 
-    <section id="homepage" class="page active">
+    <div id="home" class="page active">
         <header class="main-header">
-            <img src="immagini/demi_logo.jpg" alt="Logo del Brand DEMI" class="logo">
-            <h1>DEMI</h1>
-            <p>Innovazione, design e performance.</p>
+            <video autoplay muted loop playsinline class="header-video">
+                <source src="video/video0 (1).mp4" type="video/mp4">
+                Il tuo browser non supporta il tag video.
+            </video>
+            <img src="immagini/logo.jpeg" alt="Logo DEMI Motors" class="logo">
+            <h1>DEMI Motors</h1>
+            <p>Innovazione. Prestazioni. Lusso.</p>
+        </header>
+
+        <nav class="main-nav">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#modelli" class="nav-link">Modelli</a>
+            <a href="#fuoriserie" class="nav-link">Fuoriserie</a>
+        </nav>
+
+        <section class="home-content">
+            </section>
+    </div>
+
+    <div id="modelli" class="page">
+        <header class="main-header modelli">
+            <h1>La Nostra Gamma</h1>
+            <p>Design, ingegneria e passione in ogni modello.</p>
         </header>
         <nav class="main-nav">
-            <a href="#velora" class="nav-link">VELORA</a>
-            <a href="#es5" class="nav-link">ES5</a>
-            <a href="#sb5" class="nav-link">SB5</a>
-            <a href="#es7" class="nav-link">ES7</a>
-            <a href="#sc7" class="nav-link">SC7</a>
-            <a href="#velora-strix" class="nav-link">VELORA STRIX</a>
-            <a href="#es7-track" class="nav-link">ES7 TRACK</a>
-            <a href="#sc7-track" class="nav-link">SC7 TRACK</a>
-            <a href="fuoriserie.html" class="nav-link">FUORI SERIE</a>
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#modelli" class="nav-link active">Modelli</a>
+            <a href="#fuoriserie" class="nav-link">Fuoriserie</a>
         </nav>
-    </section>
 
-    <section id="velora" class="page modello-auto">
-        <header class="model-header">
-            <a href="#homepage" class="nav-link back-link">&lt; Torna alla Home</a>
+        <main class="modelli-container">
+            <section id="es5" class="modello-auto">
+                <div class="model-grid">
+                    <div class="info-container">
+                        <h2 class="car-title">ES5</h2>
+                        <p class="car-tagline">Agilità pura. La ES5 è l'essenza della guida sportiva urbana.</p>
+                        <div class="specs-grid">
+                            <div class="spec-item"><strong>Motore</strong><span>2.0L Turbo 4 Cilindri</span></div>
+                            <div class="spec-item"><strong>Potenza</strong><span>400 CV</span></div>
+                            <div class="spec-item"><strong>0-100 km/h</strong><span>4.2 sec</span></div>
+                            <div class="spec-item"><strong>Velocità Max</strong><span>280 km/h</span></div>
+                        </div>
+                        <h3>Colori</h3>
+                        <div class="color-options">
+                            <button class="btn-color active" data-target="es5-nero">Nero</button>
+                            <button class="btn-color" data-target="es5-bianco">Bianco</button>
+                            <button class="btn-color" data-target="es5-grigio">Grigio</button>
+                        </div>
+                    </div>
+                    <div class="image-gallery-container">
+                        <div class="gallery-controls">
+                            <button class="gallery-prev">&lt;</button>
+                            <button class="gallery-next">&gt;</button>
+                        </div>
+                        <div class="image-container active" data-color="es5-nero">
+                            <img src="immagini/modelli/es5/DEMI ES5 FRONTALE NERO.jpg" alt="ES5 nera frontale" class="active">
+                            <img src="immagini/modelli/es5/DEMI ES5 RETRO NERO.jpg" alt="ES5 nera posteriore">
+                        </div>
+                        <div class="image-container" data-color="es5-bianco">
+                            <img src="immagini/modelli/es5/DEMI ES5 FRONTALE BIANCO.jpg" alt="ES5 bianca frontale">
+                            <img src="immagini/modelli/es5/DEMI ES5 RETRO BIANCO.jpg" alt="ES5 bianca posteriore">
+                        </div>
+                        <div class="image-container" data-color="es5-grigio">
+                            <img src="immagini/modelli/es5/DEMI ES5 FRONTALE GRIGIO.jpg" alt="ES5 grigia frontale">
+                            <img src="immagini/modelli/es5/DEMI ES5 RETRO GRIGIO.jpg" alt="ES5 grigia posteriore">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="es7" class="modello-auto">
+                <div class="model-grid">
+                    <div class="info-container">
+                        <h2 class="car-title">ES7</h2>
+                        <p class="car-tagline">L'eleganza sportiva si fonde con le prestazioni mozzafiato. La berlina che non scende a compromessi.</p>
+                        <div class="specs-grid">
+                            <div class="spec-item"><strong>Motore</strong><span>3.0L V6 Twin-Turbo</span></div>
+                            <div class="spec-item"><strong>Potenza</strong><span>550 CV</span></div>
+                            <div class="spec-item"><strong>0-100 km/h</strong><span>3.8 sec</span></div>
+                            <div class="spec-item"><strong>Velocità Max</strong><span>310 km/h</span></div>
+                        </div>
+                        <h3>Colori</h3>
+                        <div class="color-options">
+                            <button class="btn-color active" data-target="es7-nero">Nero</button>
+                            <button class="btn-color" data-target="es7-bianco">Bianco</button>
+                            <button class="btn-color" data-target="es7-grigio">Grigio</button>
+                        </div>
+                    </div>
+                    <div class="image-gallery-container">
+                        <div class="gallery-controls">
+                            <button class="gallery-prev">&lt;</button>
+                            <button class="gallery-next">&gt;</button>
+                        </div>
+                        <div class="image-container active" data-color="es7-nero">
+                            <img src="immagini/modelli/es7/ES7 FRONTALE NERO.png" alt="ES7 nera frontale" class="active">
+                            <img src="immagini/modelli/es7/ES7 RETRO NERO.png" alt="ES7 nera posteriore">
+                        </div>
+                        <div class="image-container" data-color="es7-bianco">
+                            <img src="immagini/modelli/es7/ES7 FRONTALE BIANCO.png" alt="ES7 bianca frontale">
+                            <img src="immagini/modelli/es7/ES7 RETRO BIANCO.png" alt="ES7 bianca posteriore">
+                        </div>
+                        <div class="image-container" data-color="es7-grigio">
+                            <img src="immagini/modelli/es7/ES7 FRONTALE GRIGIO.png" alt="ES7 grigia frontale">
+                            <img src="immagini/modelli/es7/ES7 RETRO GRIGIO.png" alt="ES7 grigia posteriore">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sc7" class="modello-auto">
+                <div class="model-grid">
+                    <div class="info-container">
+                        <h2 class="car-title">SC7</h2>
+                        <p class="car-tagline">La super berlina che unisce la potenza di una supersportiva al lusso e alla tecnologia.</p>
+                        <div class="specs-grid">
+                            <div class="spec-item"><strong>Motore</strong><span>4.0L V8 Twin-Turbo</span></div>
+                            <div class="spec-item"><strong>Potenza</strong><span>680 CV</span></div>
+                            <div class="spec-item"><strong>0-100 km/h</strong><span>3.1 sec</span></div>
+                            <div class="spec-item"><strong>Velocità Max</strong><span>325 km/h</span></div>
+                        </div>
+                        <h3>Interni</h3>
+                        <div class="color-options">
+                            <button class="btn-color active" data-target="sc7-interni-bianchi">Interni Bianchi</button>
+                            <button class="btn-color" data-target="sc7-interni-scuri">Interni Scuri</button>
+                        </div>
+                    </div>
+                    <div class="image-gallery-container">
+                        <div class="gallery-controls">
+                            <button class="gallery-prev">&lt;</button>
+                            <button class="gallery-next">&gt;</button>
+                        </div>
+                        <div class="image-container active" data-color="sc7-interni-bianchi">
+                            <img src="immagini/modelli/sc7/SC7 INTERNI BIANCHI.jpeg" alt="Interni bianchi SC7" class="active">
+                            <img src="immagini/modelli/sc7/sc7 sedili anteriori.jpg" alt="Sedili anteriori SC7">
+                            <img src="immagini/modelli/sc7/sc7 sedili posteriori.jpg" alt="Sedili posteriori SC7">
+                        </div>
+                        <div class="image-container" data-color="sc7-interni-scuri">
+                            <img src="immagini/modelli/sc7/SC7 INTERNI SCURI.jpeg" alt="Interni scuri SC7">
+                            <img src="immagini/modelli/sc7/sc7 fronte.jpg" alt="SC7 frontale">
+                            <img src="immagini/modelli/sc7/sc7 retro.jpg" alt="SC7 posteriore">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="velora" class="modello-auto">
+                <div class="model-grid">
+                    <div class="info-container">
+                        <h2 class="car-title">VELORA</h2>
+                        <p class="car-tagline">L'essenza delle prestazioni. Un'opera d'arte scolpita dal vento.</p>
+                        <div class="specs-grid">
+                            <div class="spec-item"><strong>Motore</strong><span>5.0L V10</span></div>
+                            <div class="spec-item"><strong>Potenza</strong><span>850 CV</span></div>
+                            <div class="spec-item"><strong>0-100 km/h</strong><span>2.8 sec</span></div>
+                            <div class="spec-item"><strong>Velocità Max</strong><span>350 km/h</span></div>
+                        </div>
+                        <h3>Colori e Interni</h3>
+                        <div class="color-options">
+                            <button class="btn-color active" data-target="velora-nero">Nero</button>
+                            <button class="btn-color" data-target="velora-bianco">Bianco</button>
+                            <button class="btn-color" data-target="velora-interni-bianchi">Interni Bianchi</button>
+                            <button class="btn-color" data-target="velora-interni-rossi">Interni Rossi</button>
+                        </div>
+                    </div>
+                    <div class="image-gallery-container">
+                        <div class="gallery-controls">
+                            <button class="gallery-prev">&lt;</button>
+                            <button class="gallery-next">&gt;</button>
+                        </div>
+                        <div class="image-container active" data-color="velora-nero">
+                            <img src="immagini/modelli/velora/VELORA FRONTALE NERO.jpg" alt="Velora nera frontale" class="active">
+                            <img src="immagini/modelli/velora/VELORA RETRO NERO.jpg" alt="Velora nera posteriore">
+                        </div>
+                        <div class="image-container" data-color="velora-bianco">
+                            <img src="immagini/modelli/velora/VELORA FRONTALE BIANCO.jpg" alt="Velora bianca frontale">
+                            <img src="immagini/modelli/velora/VELORA RETRO BIANCO.jpg" alt="Velora bianca posteriore">
+                        </div>
+                        <div class="image-container" data-color="velora-interni-bianchi">
+                            <img src="immagini/modelli/velora/VELORA INTERNO BIANCO.jpg" alt="Interni bianchi">
+                        </div>
+                        <div class="image-container" data-color="velora-interni-rossi">
+                            <img src="immagini/modelli/velora/VELORA INTERNO ROSSO.jpg" alt="Interni rossi">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sb5" class="modello-auto">
+                <div class="model-grid">
+                    <div class="info-container">
+                        <h2 class="car-title">SB5</h2>
+                        <p class="car-tagline">Lusso, spazio e versatilità, con prestazioni da vera DEMI.</p>
+                        <div class="specs-grid">
+                            <div class="spec-item"><strong>Motore</strong><span>4.0L V8 Twin-Turbo</span></div>
+                            <div class="spec-item"><strong>Potenza</strong><span>620 CV</span></div>
+                            <div class="spec-item"><strong>0-100 km/h</strong><span>3.6 sec</span></div>
+                            <div class="spec-item"><strong>Velocità Max</strong><span>305 km/h</span></div>
+                        </div>
+                        <h3>Colori</h3>
+                        <div class="color-options">
+                            <button class="btn-color active" data-target="sb5-nero">Nero</button>
+                            <button class="btn-color" data-target="sb5-bianco">Bianco</button>
+                            <button class="btn-color" data-target="sb5-grigio">Grigio</button>
+                        </div>
+                    </div>
+                    <div class="image-gallery-container">
+                        <div class="gallery-controls">
+                            <button class="gallery-prev">&lt;</button>
+                            <button class="gallery-next">&gt;</button>
+                        </div>
+                        <div class="image-container active" data-color="sb5-nero">
+                            <img src="immagini/modelli/sb5/DEMI SB5 FRONTALE NERO.png" alt="SB5 nera frontale" class="active">
+                            <img src="immagini/modelli/sb5/DEMI SB5 RETRO NERO.png" alt="SB5 nera posteriore">
+                        </div>
+                        <div class="image-container" data-color="sb5-bianco">
+                            <img src="immagini/modelli/sb5/DEMI SB5 FRONTALE BIANCO.png" alt="SB5 bianca frontale">
+                            <img src="immagini/modelli/sb5/DEMI SB5 RETRO BIANCO.png" alt="SB5 bianca posteriore">
+                        </div>
+                        <div class="image-container" data-color="sb5-grigio">
+                            <img src="immagini/modelli/sb5/DEMI SB5 FRONTALE GRIGIO.png" alt="SB5 grigia frontale">
+                            <img src="immagini/modelli/sb5/DEMI SB5 RETRO GRIGIO.png" alt="SB5 grigia posteriore">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="fuoriserie" class="page">
+        <header class="main-header fuoriserie-page">
+            <h1>Fuoriserie</h1>
+            <p>Esclusività e artigianato senza eguali. L'apice dell'eccellenza DEMI.</p>
         </header>
-        <div class="model-grid">
-            <div class="image-gallery-container">
-                <div id="velora-bianco" class="image-container active">
-                    <img src="immagini/VELORA FRONTALE BIANCO.jpg" alt="VELORA Frontale Bianco" class="active">
-                    <img src="immagini/VELORA RETRO BIANCO.jpg" alt="VELORA Retro Bianco">
-                </div>
-                <div id="velora-nero" class="image-container">
-                    <img src="immagini/VELORA FRONTALE NERO.jpg" alt="VELORA Frontale Nero">
-                    <img src="immagini/VELORA RETRO NERO.jpg" alt="VELORA Retro Nero">
-                </div>
-                <div id="velora-interni" class="image-container">
-                    <img src="immagini/VELORA INTERNO BIANCO.jpg" alt="VELORA Interni">
-                    <img src="immagini/VELORA INTERNO ROSSO.jpg" alt="VELORA Interni Rosse">
-                </div>
-                <div class="gallery-controls">
-                    <button class="gallery-prev">&lt;</button>
-                    <button class="gallery-next">&gt;</button>
-                </div>
-            </div>
-            
-            <div class="info-container">
-                <h2>VELORA</h2>
-                <p class="car-tagline">L'eleganza si fa strada. La VELORA è una berlina compatta che unisce un design raffinato a un'efficienza rivoluzionaria.</p>
-                
-                <div class="specs-grid">
-                    <div class="spec-item">
-                        <strong>Potenza:</strong>
-                        <span>~190 CV</span>
-                    </div>
-                    <div class="spec-item">
-                        <strong>Alimentazione:</strong>
-                        <span>Elettrica con Range Extender</span>
-                    </div>
-                    <div class="spec-item">
-                        <strong>Trazione:</strong>
-                        <span>Posteriore</span>
-                    </div>
-                    <div class="spec-item">
-                        <strong>Lunghezza:</strong>
-                        <span>4.40 m</span>
-                    </div>
-                </div>
 
-                <div class="color-options">
-                    <button data-target="velora-bianco" class="btn-color active">Bianco</button>
-                    <button data-target="velora-nero" class="btn-color">Nero</button>
-                    <button data-target="velora-interni" class="btn-color">Interni</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="concept-section">
-            <h3>Visione e design</h3>
-            <p>Il design di Velora è studiato per fondersi con l'ambiente urbano, mantenendo un'identità forte e inconfondibile.</p>
-            <div class="concept-images-scroller">
-                <div class="concept-image-item">
-                    <img src="immagini/VELORA FRONTALE CONCEPT BIANCO.jpg" alt="VELORA in città">
-                </div>
-                <div class="concept-image-item">
-                    <img src="immagini/VELORA RETRO CONCEPT BIANCO.jpg" alt="VELORA su strada">
-                </div>
-                <div class="concept-image-item">
-                    <img src="immagini/VELORA FRONTALE CONCEPT NERO.jpg" alt="VELORA al mare">
-                </div>
-                <div class="concept-image-item">
-                    <img src="immagini/VELORA RETRO CONCEPT NERO.jpg" alt="VELORA vista dal retro">
-                </div>
-            </div>
-        </div>
-    </section>
+        <nav class="main-nav">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#modelli" class="nav-link">Modelli</a>
+            <a href="#fuoriserie" class="nav-link active">Fuoriserie</a>
+        </nav>
 
-    <section id="es5" class="page modello-auto">
-        <header class="model-header">
-            <a href="#homepage" class="nav-link back-link">&lt; Torna alla Home</a>
-        </header>
-        <div class="model-grid">
-            <div class="image-gallery-container">
-                <div id="es5-bianco" class="image-container active">
-                    <img src="immagini/DEMI ES5 FRONTALE BIANCO.jpg" alt="ES5 Frontale Bianco" class="active">
-                    <img src="immagini/DEMI ES5 RETRO BIANCO.jpg" alt="ES5 Retro Bianco">
-                </div>
-                <div id="es5-nero" class="image-container">
-                    <img src="immagini/DEMI ES5 FRONTALE NERO.jpg" alt="ES5 Frontale Nero">
-                    <img src="immagini/DEMI ES5 RETRO NERO.jpg" alt="ES5 Retro Nero">
-                </div>
-                <div id="es5-grigio" class="image-container">
-                    <img src="immagini/DEMI ES5 FRONTALE GRIGIO.jpg" alt="ES5 Frontale Grigio">
-                    <img src="immagini/DEMI ES5 RETRO GRIGIO.jpg" alt="ES5 Retro Grigio">
-                </div>
-                <div class="gallery-controls">
-                    <button class="gallery-prev">&lt;</button>
-                    <button class="gallery-next">&gt;</button>
-                </div>
-            </div>
-            
-            <div class="info-container">
-                <h2>ES5</h2>
-                <p class="car-tagline">Cuore sportivo, anima elegante. La ES5 è una coupé 2+2 pensata per chi cerca l'emozione della guida pura.</p>
-                
-                <div class="specs-grid">
-                    <div class="spec-item">
-                        <strong>Motore:</strong>
-                        <span>2.0L turbo 4 cilindri</span>
+        <main class="fuoriserie-container">
+            <section id="sclm" class="modello-auto">
+                <div class="model-grid">
+                    <div class="info-container">
+                        <h2 class="car-title">SCLM</h2>
+                        <p class="car-tagline">Hypercar da corsa omologata per la strada, l'eredità dei circuiti nel tuo garage.</p>
+                        <div class="specs-grid">
+                            <div class="spec-item"><strong>Motore</strong><span>6.5L V12 Aspirato</span></div>
+                            <div class="spec-item"><strong>Potenza</strong><span>1200 CV</span></div>
+                            <div class="spec-item"><strong>0-100 km/h</strong><span>2.3 sec</span></div>
+                            <div class="spec-item"><strong>Velocità Max</strong><span>390 km/h</span></div>
+                        </div>
+                        <h3>Concept</h3>
+                        <p>La SCLM è la massima espressione delle nostre radici nel motorsport, una vettura senza compromessi per i puristi della guida.</p>
                     </div>
-                    <div class="spec-item">
-                        <strong>Potenza:</strong>
-                        <span>245 CV</span>
-                    </div>
-                    <div class="spec-item">
-                        <strong>Trazione:</strong>
-                        <span>Posteriore</span>
-                    </div>
-                    <div class="spec-item">
-                        <strong>Dimensioni:</strong>
-                        <span>4.30m x 1.90m x 1.38m</span>
+                    <div class="image-gallery-container">
+                        <div class="gallery-controls">
+                            <button class="gallery-prev">&lt;</button>
+                            <button class="gallery-next">&gt;</button>
+                        </div>
+                        <div class="image-container active">
+                            <img src="immagini/fuoriserie/sclm/DEMI SCLM FRONTALE.png" alt="SCLM frontale" class="active">
+                            <img src="immagini/fuoriserie/sclm/DEMI SCLM RETRO.png" alt="SCLM posteriore">
+                        </div>
                     </div>
                 </div>
-                
-                <div class="color-options">
-                    <button data-target="es5-bianco" class="btn-color active">Bianco</button>
-                    <button data-target="es5-nero" class="btn-color">Nero</button>
-                    <button data-target="es5-grigio" class="btn-color">Grigio</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="concept-section">
-            <h3>Visione e design</h3>
-            <p>Il profilo aggressivo e le linee affilate della ES5 sono un omaggio al dinamismo. Scopri la sua presenza inconfondibile su ogni strada.</p>
-            <div class="concept-images-scroller">
-                <div class="concept-image-item">
-                    <img src="immagini/ES5 VISIONE FRONTE.png" alt="ES5 vista frontale su strada">
-                </div>
-                <div class="concept-image-item">
-                    <img src="immagini/ES5 VISIONE RETRO.jpg" alt="ES5 vista posteriore su strada">
-                </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <section id="sb5" class="page modello-auto">
-        <header class="model-header">
-            <a href="#homepage" class="nav-link back-link">&lt; Torna alla Home</a>
-        </header>
-        <div class="model-grid">
-            <div class="image-gallery-container">
-                <div id="sb5-bianco" class="image-container active">
-                    <img src="immagini/DEMI SB5 FRONTALE BIANCO.png" alt="SB5 Frontale Bianco" class="active">
-                    <img src="immagini/DEMI SB5 RETRO BIANCO.png" alt="SB5 Retro Bianco">
-                </div>
-                <div id="sb5-nero" class="image-container">
-                    <img src="immagini/DEMI SB5 FRONTALE NERO.png" alt="SB5 Frontale Nero">
-                    <img src="immagini/DEMI SB5 RETRO NERO.png" alt="SB5 Retro Nero">
-                </div>
-                <div id="sb5-grigio" class="image-container">
-                    <img src="immagini/DEMI SB5 FRONTALE GRIGIO.png" alt="SB5 Frontale Grigio">
-                    <img src="immagini/DEMI SB5 RETRO GRIGIO.png" alt="SB5 Retro Grigio">
-                </div>
-                <div id="sb5-interni" class="image-container">
-                    <img src="immagini/DEMI SB5 INTERNI.png" alt="SB5 Interni" class="active">
-                </div>
-                <div class="gallery-controls">
-                    <button class="gallery-prev">&lt;</button>
-                    <button class="gallery-next">&gt;</button>
-                </div>
-            </div>
-            
-            <div class="info-container">
-                <h2>SB5</h2>
-                <p class="car-tagline">Eleganza sportiva e praticità. La SB5 è una shooting brake che combina un design mozzafiato con la versatilità di una station wagon.</p>
-                
-                <div class="specs-grid">
-                    <div class="spec-item">
-                        <strong>Motore:</strong>
-                        <span>2.0L turbo 4 cilindri</span>
+            <section id="sgt3" class="modello-auto">
+                <div class="model-grid">
+                    <div class="info-container">
+                        <h2 class="car-title">SGT3</h2>
+                        <p class="car-tagline">L'essenza del Gran Turismo. L'eleganza di un'auto da corsa unita a prestazioni estreme.</p>
+                        <div class="specs-grid">
+                            <div class="spec-item"><strong>Motore</strong><span>4.0L V8 Twin-Turbo Ibrido</span></div>
+                            <div class="spec-item"><strong>Potenza</strong><span>1000 CV</span></div>
+                            <div class="spec-item"><strong>0-100 km/h</strong><span>2.5 sec</span></div>
+                            <div class="spec-item"><strong>Velocità Max</strong><span>375 km/h</span></div>
+                        </div>
+                        <h3>Concept</h3>
+                        <p>La SGT3 fonde il comfort di un'auto da strada con le prestazioni di una vettura da gara, per un'esperienza di guida senza pari.</p>
                     </div>
-                    <div class="spec-item">
-                        <strong>Potenza:</strong>
-                        <span>245 CV</span>
-                    </div>
-                    <div class="spec-item">
-                        <strong>Trazione:</strong>
-                        <span>Posteriore</span>
-                    </div>
-                    <div class="spec-item">
-                        <strong>Dimensioni:</strong>
-                        <span>4.40m x 1.90m x 1.45m</span>
+                    <div class="image-gallery-container">
+                        <div class="gallery-controls">
+                            <button class="gallery-prev">&lt;</button>
+                            <button class="gallery-next">&gt;</button>
+                        </div>
+                        <div class="image-container active">
+                            <img src="immagini/fuoriserie/sgt3/DEMI SGT3 FRONTALE.png" alt="SGT3 frontale" class="active">
+                            <img src="immagini/fuoriserie/sgt3/DEMI SGT3 RETRO.png" alt="SGT3 posteriore">
+                        </div>
                     </div>
                 </div>
-                
-                <div class="color-options">
-                    <button data-target="sb5-bianco" class="btn-color active">Bianco</button>
-                    <button data-target="sb5-nero" class="btn-color">Nero</button>
-                    <button data-target="sb5-grigio" class="btn-color">Grigio</button>
-                    <button data-target="sb5-interni" class="btn-color">Interni</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="concept-section">
-            <h3>Visione e design</h3>
-            <p>Le linee fluide e il tetto ribassato della SB5 la rendono un'icona di stile che si fa notare. Scopri la sua presenza unica in ogni ambiente.</p>
-            <div class="concept-images-scroller">
-                <div class="concept-image-item">
-                    <img src="immagini/DEMI SB5 VISIONE FRONTALE.png" alt="SB5 concetto su strada">
-                </div>
-                <div class="concept-image-item">
-                    <img src="immagini/DEMI SB5 VISIONE RETRO.png" alt="SB5 concetto su strada">
-                </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <section id="es7" class="page modello-auto">
-        <header class="model-header">
-            <a href="#homepage" class="nav-link back-link">&lt; Torna alla Home</a>
-        </header>
-        <div class="model-grid">
-            <div class="image-gallery-container">
-                <div id="es7-bianco" class="image-container active">
-                    <img src="immagini/ES7 FRONTALE BIANCO.png" alt="ES7 Frontale Bianco" class="active">
-                    <img src="immagini/ES7 RETRO BIANCO.png" alt="ES7 Retro Bianco">
-                </div>
-                <div id="es7-nero" class="image-container">
-                    <img src="immagini/ES7 FRONTALE NERO.png" alt="ES7 Frontale Nero">
-                    <img src="immagini/ES7 RETRO NERO.png" alt="ES7 Retro Nero">
-                </div>
-                <div id="es7-grigio" class="image-container">
-                    <img src="immagini/ES7 FRONTALE GRIGIO.png" alt="ES7 Frontale Grigio">
-                    <img src="immagini/ES7 RETRO GRIGIO.png" alt="ES7 Retro Grigio">
-                </div>
-                <div class="gallery-controls">
-                    <button class="gallery-prev">&lt;</button>
-                    <button class="gallery-next">&gt;</button>
-                </div>
-            </div>
-            
-            <div class="info-container">
-                <h2>ES7</h2>
-                <p class="car-tagline">La potenza incontra il lusso. La ES7 è una coupé ad alte prestazioni che unisce un design elegante a una potenza straordinaria.</p>
-                
-                <div class="specs-grid">
-                    <div class="spec-item">
-                        <strong>Motore:</strong>
-                        <span>3.0L V6 biturbo</span>
+            <section id="sc7-track" class="modello-auto">
+                <div class="model-grid">
+                    <div class="info-container">
+                        <h2 class="car-title">SC7 TRACK</h2>
+                        <p class="car-tagline">Progettata per dominare la pista. Leggera, potente, inarrestabile.</p>
+                        <div class="specs-grid">
+                            <div class="spec-item"><strong>Motore</strong><span>4.0L V8 Biturbo</span></div>
+                            <div class="spec-item"><strong>Potenza</strong><span>920 CV</span></div>
+                            <div class="spec-item"><strong>0-100 km/h</strong><span>2.5 sec</span></div>
+                            <div class="spec-item"><strong>Velocità Max</strong><span>380 km/h</span></div>
+                        </div>
+                        <h3>Colori</h3>
+                        <div class="color-options">
+                            <button class="btn-color active" data-target="sc7-track-nero">Nero</button>
+                            <button class="btn-color" data-target="sc7-track-bianco">Bianco</button>
+                            <button class="btn-color" data-target="sc7-track-grigio">Grigio</button>
+                        </div>
                     </div>
-                    <div class="spec-item">
-                        <strong>Potenza:</strong>
-                        <span>550 CV</span>
-                    </div>
-                    <div class="spec-item">
-                        <strong>Trazione:</strong>
-                        <span>Integrale</span>
-                    </div>
-                    <div class="spec-item">
-                        <strong>Dimensioni:</strong>
-                        <span>4.60m x 1.99m x 1.46m</span>
+                    <div class="image-gallery-container">
+                        <div class="gallery-controls">
+                            <button class="gallery-prev">&lt;</button>
+                            <button class="gallery-next">&gt;</button>
+                        </div>
+                        <div class="image-container active" data-color="sc7-track-nero">
+                            <img src="immagini/fuoriserie/sc7-track/SC7 TRACK FRONTALE NERO.jpg" alt="SC7 TRACK nera frontale" class="active">
+                            <img src="immagini/fuoriserie/sc7-track/SC7 TRACK RETRO GRIGIO.jpg" alt="SC7 TRACK posteriore">
+                        </div>
+                        <div class="image-container" data-color="sc7-track-bianco">
+                            <img src="immagini/fuoriserie/sc7-track/SC7 TRACK FRONTALE BIANCO.jpg" alt="SC7 TRACK bianca frontale">
+                        </div>
+                        <div class="image-container" data-color="sc7-track-grigio">
+                            <img src="immagini/fuoriserie/sc7-track/ES7 TRACK FRONTALE GRIGIO.jpg" alt="ES7 TRACK grigia frontale">
+                        </div>
                     </div>
                 </div>
                 
-                <div class="color-options">
-                    <button data-target="es7-bianco" class="btn-color active">Bianco</button>
-                    <button data-target="es7-nero" class="btn-color">Nero</button>
-                    <button data-target="es7-grigio" class="btn-color">Grigio</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="concept-section">
-            <h3>Visione e design</h3>
-            <p>Ogni linea della ES7 è studiata per trasmettere aggressività e dinamismo, rendendola protagonista su ogni strada.</p>
-            <div class="concept-images-scroller">
-                <div class="concept-image-item">
-                    <img src="immagini/ES7 VISIONE FRONTALE.png" alt="ES7 concetto su strada">
-                </div>
-                <div class="concept-image-item">
-                    <img src="immagini/ES7 VISIONE RETRO.png" alt="ES7 concetto su strada">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="sc7" class="page modello-auto">
-        <header class="model-header">
-            <a href="#homepage" class="nav-link back-link">&lt; Torna alla Home</a>
-        </header>
-        <div class="model-grid">
-            <div class="image-gallery-container">
-                <div id="sc7-esterni" class="image-container active">
-                    <img src="immagini/sc7 fronte.jpg" alt="SC7 Frontale" class="active">
-                    <img src="immagini/sc7 retro.jpg" alt="SC7 Retro">
-                </div>
-                <div id="sc7-interni-bianchi" class="image-container">
-                    <img src="immagini/SC7 INTERNI BIANCHI.jpeg" alt="SC7 Interni Bianchi">
-                </div>
-                <div id="sc7-interni-scuri" class="image-container">
-                    <img src="immagini/SC7 INTERNI SCURI.jpeg" alt="SC7 Interni Scuri">
-                    <img src="immagini/sc7 sedili anteriori.jpg" alt="SC7 Sedili anteriori">
-                    <img src="immagini/sc7 sedili posteriori.jpg" alt="SC7 Sedili posteriori">
-                </div>
-                <div class="gallery-controls">
-                    <button class="gallery-prev">&lt;</button>
-                    <button class="gallery-next">&gt;</button>
-                </div>
-            </div>
-            
-            <div class="info-container">
-                <h2>SC7</h2>
-                <p class="car-tagline">L'ammiraglia del lusso. La SC7 è una berlina coupé ibrida che unisce l'eleganza di un'ammiraglia a una potenza eccezionale.</p>
-                
-                <div class="specs-grid">
-                    <div class="spec-item">
-                        <strong>Motore:</strong>
-                        <span>3.0L V6 biturbo + elettrico</span>
-                    </div>
-                    <div class="spec-item">
-                        <strong>Potenza:</strong>
-                        <span>900 CV</span>
-                    </div>
-                    <div class="spec-item">
-                        <strong>Trazione:</strong>
-                        <span>Integrale</span>
-                    </div>
-                    <div class="spec-item">
-                        <strong>Dimensioni:</strong>
-                        <span>4.95m x 2.10m x 1.47m</span>
+                <div class="concept-section">
+                    <h3>La Nostra Visione per la Pista</h3>
+                    <p>La SC7 Track non è solo una supersportiva, è un'espressione pura di ingegneria, aerodinamica e passione. Ogni linea e ogni dettaglio è stato concepito per un unico obiettivo: dominare la pista. Ecco come prende vita il nostro concept.</p>
+                    <div class="concept-images-scroller">
+                        <div class="concept-item">
+                            <img src="immagini/fuoriserie/sc7-track/SC7 TRACK FRONTALE NERO 2.jpg" alt="Vista frontale della SC7 TRACK in movimento">
+                        </div>
+                        <div class="concept-item">
+                            <img src="immagini/fuoriserie/sc7-track/SC7 TRACK RETRO VISIONE.jpg" alt="Vista posteriore della SC7 TRACK">
+                        </div>
+                        <div class="concept-item">
+                            <video controls playsinline>
+                                <source src="video/Generated File August 28, 2025 - 1_48PM.mp4" type="video/mp4">
+                                Il tuo browser non supporta il tag video.
+                            </video>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="color-options">
-                    <button data-target="sc7-esterni" class="btn-color active">Esterni</button>
-                    <button data-target="sc7-interni-bianchi" class="btn-color">Interni Bianchi</button>
-                    <button data-target="sc7-interni-scuri" class="btn-color">Interni Scuri</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="concept-section">
-            <h3>Visione e design</h3>
-            <p>La SC7 è l'espressione massima del lusso e del design DEMI. Le sue linee imponenti e la sua presenza su strada la rendono un punto di riferimento.</p>
-            <div class="concept-images-scroller">
-                <div class="concept-image-item">
-                    <img src="immagini/sc7 fronte.jpg" alt="SC7 visione frontale">
-                </div>
-                <div class="concept-image-item">
-                    <img src="immagini/sc7 retro.jpg" alt="SC7 visione posteriore">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="velora-strix" class="page modello-auto">
-        <header class="model-header">
-            <a href="#homepage" class="nav-link back-link">&lt; Torna alla Home</a>
-        </header>
-        <div class="model-grid">
-            <div class="image-gallery-container">
-                <div id="velora-strix-bianco" class="image-container active">
-                    <img src="immagini/VELORA STRIX FRONTALE BIANCA.jpg" alt="VELORA STRIX Frontale Bianca" class="active">
-                    <img src="immagini/VELORA STRIX RETRO BIANCA.jpg" alt="VELORA STRIX Retro Bianca">
-                </div>
-                <div id="velora-strix-nero" class="image-container">
-                    <img src="immagini/VELORA STRIX FRONTALE NERO.jpg" alt="VELORA STRIX Frontale Nera">
-                    <img src="immagini/VELORA STRIX RETRO NERO.jpg" alt="VELORA STRIX Retro Nera">
-                </div>
-                <div id="velora-strix-giallo" class="image-container">
-                    <img src="immagini/VELORA STRIX FRONTALE GIALLO.jpg" alt="VELORA STRIX Frontale Gialla">
-                    <img src="immagini/VELORA STRIX RETRO GIALLO.jpg" alt="VELORA STRIX Retro Gialla">
-                </div>
-                <div id="velora-strix-interni" class="image-container">
-                    <img src="immagini/VELORA STRIX INTERNI ANTERIORI.jpg" alt="VELORA STRIX Interni Anteriori">
-                    <img src="immagini/VELORA STRIX INTERNI POSTERIORI.jpeg" alt="VELORA STRIX Interni Posteriori">
-                </div>
-                <div class="gallery-controls">
-                    <button class="gallery-prev">&lt;</button>
-                    <button class="gallery-next">&gt;</button>
-                </div>
-            </div>
-            
-            <div class="info-container">
-                <h2>VELORA STRIX</h2>
-                <p class="car-tagline">L'adrenalina prende forma. La VELORA STRIX è la versione sportiva della berlina, con prestazioni ottimizzate per la guida più dinamica.</p>
-                
-                <div class="specs-grid">
-                    <div class="spec-item">
-                        <strong>Carrozzeria:</strong>
-                        <span>Berlina compatta</span>
-                    </div>
-                    <div class="spec-item">
-                        <strong>Potenza:</strong>
-                        <span>300 CV</span>
-                    </div>
-                    <div class="spec-item">
-                        <strong>Trazione:</strong>
-                        <span>Posteriore</span>
-                    </div>
-                    <div class="spec-item">
-                        <strong>Assetto:</strong>
-                        <span>Ammortizzatori più rigidi</span>
-                    </div>
-                </div>
-                
-                <div class="color-options">
-                    <button data-target="velora-strix-bianco" class="btn-color active">Bianco</button>
-                    <button data-target="velora-strix-nero" class="btn-color">Nero</button>
-                    <button data-target="velora-strix-giallo" class="btn-color">Giallo</button>
-                    <button data-target="velora-strix-interni" class="btn-color">Interni</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="concept-section">
-            <h3>Visione e design</h3>
-            <p>Ogni curva e ogni linea aerodinamica della VELORA STRIX sono state disegnate per esaltare le performance. È una belva da domare.</p>
-            <div class="concept-images-scroller">
-                <div class="concept-image-item">
-                    <img src="immagini/VELORA STRIX RETRO CONCEPT.jpg" alt="VELORA STRIX concetto in montagna">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="es7-track" class="page modello-auto">
-        <header class="model-header">
-            <a href="#homepage" class="nav-link back-link">&lt; Torna alla Home</a>
-        </header>
-        <div class="model-grid">
-            <div class="image-gallery-container">
-                <div id="es7-track-bianco" class="image-container active">
-                    <img src="immagini/ES7 TRACK FRONTALE BIANCA.jpg" alt="ES7 TRACK Frontale Bianca" class="active">
-                    <img src="immagini/ES7 TRACK RETRO BIANCA.png" alt="ES7 TRACK Retro Bianca">
-                </div>
-                <div id="es7-track-nero" class="image-container">
-                    <img src="immagini/ES7 TRACK FRONTALE NERO.jpg" alt="ES7 TRACK Frontale Nera">
-                    <img src="immagini/ES7 TRACK RETRO NERO.png" alt="ES7 TRACK Retro Nera">
-                </div>
-                <div id="es7-track-grigio" class="image-container">
-                    <img src="immagini/ES7 TRACK FRONTALE GRIGIO.jpg" alt="ES7 TRACK Frontale Grigia">
-                    <img src="immagini/ES7 TRACK RETRO GRIGIO.png" alt="ES7 TRACK Retro Grigia">
-                </div>
-                <div class="gallery-controls">
-                    <button class="gallery-prev">&lt;</button>
-                    <button class="gallery-next">&gt;</button>
-                </div>
-            </div>
-            
-            <div class="info-container">
-                <h2>ES7 TRACK</h2>
-                <p class="car-tagline">Nata per la pista. La ES7 TRACK è la versione estrema della coupé, con potenziamenti mirati per le performance su circuito.</p>
-                
-                <div class="specs-grid">
-                    <div class="spec-item">
-                        <strong>Carrozzeria:</strong>
-                        <span>Coupé da pista</span>
-                    </div>
-                    <div class="spec-item">
-                        <strong>Potenza:</strong>
-                        <span>600 CV</span>
-                    </div>
-                    <div class="spec-item">
-                        <strong>Trazione:</strong>
-                        <span>Integrale</span>
-                    </div>
-                    <div class="spec-item">
-                        <strong>Aerodinamica:</strong>
-                        <span>Kit maggiorato</span>
-                    </div>
-                </div>
-                
-                <div class="color-options">
-                    <button data-target="es7-track-bianco" class="btn-color active">Bianco</button>
-                    <button data-target="es7-track-nero" class="btn-color">Nero</button>
-                    <button data-target="es7-track-grigio" class="btn-color">Grigio</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="concept-section">
-            <h3>Visione e design</h3>
-            <p>La ES7 TRACK non si nasconde. Le sue forme sono un inno alla velocità, pensate per dominare ogni curva.</p>
-            <div class="concept-images-scroller">
-                <div class="concept-image-item">
-                    <img src="immagini/ES7 TRACK VISIONE RETRO.png" alt="ES7 TRACK concetto in pista">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="sc7-track" class="page modello-auto">
-        <header class="model-header">
-            <a href="#homepage" class="nav-link back-link">&lt; Torna alla Home</a>
-        </header>
-        <div class="model-grid">
-            <div class="image-gallery-container">
-                <div id="sc7-track-nero" class="image-container active">
-                    <img src="immagini/SC7 TRACK FRONTALE NERO.jpg" alt="SC7 TRACK Frontale Nero Fari Accesi" class="active">
-                    <img src="immagini/SC7 TRACK FRONTALE NERO FARI SPENTI.jpg" alt="SC7 TRACK Frontale Nero Fari Spenti">
-                </div>
-                <div id="sc7-track-bianco" class="image-container">
-                    <img src="immagini/SC7 TRACK FRONTALE BIANCO.jpg" alt="SC7 TRACK Frontale Bianco">
-                    <img src="immagini/SC7 TRACK RETRO GRIGIO.jpg" alt="SC7 TRACK Retro Grigio">
-                </div>
-                <div id="sc7-track-visione-retro" class="image-container">
-                    <img src="immagini/SC7 TRACK RETRO VISIONE.jpg" alt="SC7 TRACK Retro Visione" class="active">
-                </div>
-                <div class="gallery-controls">
-                    <button class="gallery-prev">&lt;</button>
-                    <button class="gallery-next">&gt;</button>
-                </div>
-            </div>
-            
-            <div class="info-container">
-                <h2>SC7 TRACK</h2>
-                <p class="car-tagline">Il top delle performance. La SC7 TRACK è l'evoluzione estrema dell'ammiraglia, creata per offrire prestazioni da circuito senza compromessi.</p>
-                
-                <div class="specs-grid">
-                    <div class="spec-item">
-                        <strong>Carrozzeria:</strong>
-                        <span>Berlina coupé da pista</span>
-                    </div>
-                    <div class="spec-item">
-                        <strong>Potenza:</strong>
-                        <span>1000 CV</span>
-                    </div>
-                    <div class="spec-item">
-                        <strong>Trazione:</strong>
-                        <span>Integrale</span>
-                    </div>
-                    <div class="spec-item">
-                        <strong>Aerodinamica:</strong>
-                        <span>Kit maggiorato + ala posteriore</span>
-                    </div>
-                </div>
-                
-                <div class="color-options">
-                    <button data-target="sc7-track-nero" class="btn-color active">Nero</button>
-                    <button data-target="sc7-track-bianco" class="btn-color">Bianco/Grigio</button>
-                    <button data-target="sc7-track-visione-retro" class="btn-color">Vista Pista</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="concept-section">
-            <h3>Visione e design</h3>
-            <p>Con il suo design aggressivo e l'imponente alettone, la SC7 TRACK è pensata per dominare in pista. Ogni dettaglio è studiato per la performance.</p>
-            <div class="concept-images-scroller">
-                <div class="concept-image-item">
-                    <img src="immagini/SC7 TRACK FRONTALE NERO 2.jpg" alt="SC7 TRACK Fari">
-                </div>
-            </div>
-        </div>
-    </section>
+            </section>
+        </main>
+    </div>
 
     <footer>
-        <p>&copy; 2025 DEMI. Tutti i diritti riservati.</p>
+        <p>&copy; 2025 DEMI Motors. Tutti i diritti riservati.</p>
     </footer>
+
+    <div id="media-modal" class="modal">
+        <span class="modal-close">&times;</span>
+        <div class="modal-nav">
+            <span class="modal-prev">&lt;</span>
+            <span class="modal-next">&gt;</span>
+        </div>
+        <div class="modal-content">
+            </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

@@ -4,24 +4,28 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if (href.startsWith('#')) {
-                e.preventDefault();
-                const targetId = href.substring(1);
-                const pages = document.querySelectorAll('.page');
-                
-                pages.forEach(page => {
-                    page.classList.remove('active');
-                });
-                
-                const targetPage = document.getElementById(targetId);
-                if (targetPage) {
-                    targetPage.classList.add('active');
-                    window.scrollTo(0, 0);
-                }
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const pages = document.querySelectorAll('.page');
+            
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            const targetPage = document.getElementById(targetId);
+            if (targetPage) {
+                targetPage.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             }
+            
+            navLinks.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
         });
     });
+
+    // Inizializza la pagina di default (Home)
+    document.getElementById('home').classList.add('active');
+    document.querySelector('a[href="#home"]').classList.add('active');
 
     // Funzione per inizializzare le gallerie su ogni sezione
     function initializeGalleries() {
@@ -41,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     container.classList.remove('active');
                     container.querySelectorAll('img').forEach(img => img.classList.remove('active'));
                 });
-                const targetContainer = section.querySelector(`#${targetId}`);
+                const targetContainer = section.querySelector(`.image-container[data-color="${targetId}"]`);
                 if (targetContainer) {
                     targetContainer.classList.add('active');
                     const firstImage = targetContainer.querySelector('img');
@@ -55,6 +59,8 @@ document.addEventListener('DOMContentLoaded', function() {
                  const activeColorButton = section.querySelector('.btn-color.active');
                  if (activeColorButton) {
                     showGallery(activeColorButton.getAttribute('data-target'));
+                 } else {
+                     showGallery(colorButtons[0].getAttribute('data-target'));
                  }
             } else {
                 const firstGallery = section.querySelector('.image-container');
@@ -110,68 +116,111 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Aggiungi la logica per la modale delle immagini
-    const modal = document.createElement('div');
-    modal.classList.add('modal');
-    document.body.appendChild(modal);
+    // Aggiungi la logica per la modale di immagini e video
+    const modal = document.getElementById('media-modal');
+    const modalContent = modal.querySelector('.modal-content');
+    const modalClose = modal.querySelector('.modal-close');
+    const modalPrev = modal.querySelector('.modal-prev');
+    const modalNext = modal.querySelector('.modal-next');
+    
+    let currentMediaIndex = 0;
+    let currentGalleryElements = [];
 
-    const images = document.querySelectorAll('.image-container img, .concept-image-item img');
-    let currentImageIndex = 0;
-    let currentGalleryImages = [];
+    document.body.addEventListener('click', function(e) {
+        let clickedElement = e.target;
+        if (clickedElement.closest('.concept-item')) {
+            clickedElement = clickedElement.closest('.concept-item').querySelector('img, video');
+        } else if (clickedElement.closest('.image-gallery-container') && clickedElement.tagName === 'IMG') {
+            clickedElement = clickedElement.closest('.image-container.active').querySelector('img.active');
+        } else {
+            return;
+        }
 
-    images.forEach(img => {
-        img.addEventListener('click', function() {
-            const container = this.closest('.image-container');
-            const conceptScroller = this.closest('.concept-images-scroller');
-            
-            if (container) {
-                currentGalleryImages = Array.from(container.querySelectorAll('img'));
-            } else if (conceptScroller) {
-                 currentGalleryImages = Array.from(conceptScroller.querySelectorAll('img'));
-            } else {
-                currentGalleryImages = [this];
-            }
+        const container = clickedElement.closest('.image-gallery-container');
+        const conceptScroller = clickedElement.closest('.concept-images-scroller');
+        
+        if (container) {
+            currentGalleryElements = Array.from(container.querySelectorAll('.image-container.active img'));
+        } else if (conceptScroller) {
+            currentGalleryElements = Array.from(conceptScroller.querySelectorAll('.concept-item img, .concept-item video'));
+        } else {
+            currentGalleryElements = [clickedElement];
+        }
 
-            currentImageIndex = currentGalleryImages.indexOf(this);
-            openModal(this.src);
-        });
+        currentMediaIndex = currentGalleryElements.indexOf(clickedElement);
+        openModal();
     });
 
-    function openModal(imageSrc) {
-        modal.innerHTML = `
-            <span class="modal-close">&times;</span>
-            <div class="modal-nav">
-                <span class="modal-prev">&lt;</span>
-                <span class="modal-next">&gt;</span>
-            </div>
-            <div class="modal-content">
-                <img src="${imageSrc}" alt="">
-            </div>
-        `;
+    function openModal() {
+        updateModalContent();
         modal.style.display = 'flex';
+    }
+
+    function updateModalContent() {
+        const currentMediaElement = currentGalleryElements[currentMediaIndex];
+        const isVideo = currentMediaElement.tagName.toLowerCase() === 'video';
         
-        modal.querySelector('.modal-close').onclick = () => {
-            modal.style.display = 'none';
-        };
-
-        modal.querySelector('.modal-prev').onclick = () => {
-            currentImageIndex = (currentImageIndex - 1 + currentGalleryImages.length) % currentGalleryImages.length;
-            modal.querySelector('.modal-content img').src = currentGalleryImages[currentImageIndex].src;
-        };
-
-        modal.querySelector('.modal-next').onclick = () => {
-            currentImageIndex = (currentImageIndex + 1) % currentGalleryImages.length;
-            modal.querySelector('.modal-content img').src = currentGalleryImages[currentImageIndex].src;
-        };
-
-        modal.onclick = (e) => {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-            }
-        };
+        modalContent.innerHTML = '';
+        
+        if (isVideo) {
+            const videoElement = document.createElement('video');
+            videoElement.src = currentMediaElement.querySelector('source').src;
+            videoElement.controls = true;
+            videoElement.autoplay = true;
+            videoElement.playsInline = true;
+            videoElement.loop = true;
+            modalContent.appendChild(videoElement);
+        } else {
+            const imgElement = document.createElement('img');
+            imgElement.src = currentMediaElement.src;
+            imgElement.alt = currentMediaElement.alt;
+            modalContent.appendChild(imgElement);
+        }
     }
     
+    modalClose.addEventListener('click', function() {
+        modal.style.display = 'none';
+        modalContent.querySelector('video')?.pause();
+    });
+
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+            modalContent.querySelector('video')?.pause();
+        }
+    });
+
+    modalPrev.addEventListener('click', function() {
+        currentMediaIndex = (currentMediaIndex - 1 + currentGalleryElements.length) % currentGalleryElements.length;
+        updateModalContent();
+    });
+
+    modalNext.addEventListener('click', function() {
+        currentMediaIndex = (currentMediaIndex + 1) % currentGalleryElements.length;
+        updateModalContent();
+    });
+
     // Inizializza le gallerie al caricamento della pagina
     initializeGalleries();
 
+    // Animazioni On-Scroll
+    const elementsToAnimate = document.querySelectorAll('.modello-auto, .concept-section');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.2
+    });
+
+    elementsToAnimate.forEach(element => {
+        element.classList.add('fade-in');
+        observer.observe(element);
+    });
 });
