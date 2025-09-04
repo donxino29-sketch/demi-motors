@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES7 Track - Brand Automobilistico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="es7-track" class="page active">
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="modelli.html" class="nav-link">Panoramica</a>
+            <div class="dropdown">
+                <a href="#" class="nav-link active">Tutti i Modelli</a>
+                <div class="dropdown-content">
+                    <a href="velora.html" class="active">Velora</a>
+                    <a href="es5.html">Demi ES5</a>
+                    <a href="sb5.html">Demi SB5</a>
+                    <a href="es7.html">ES7</a>
+                    <a href="es7_track.html">ES7 Track</a>
+                    <a href="sc7.html">SC7</a>
+                </div>
+            </div>
+            <a href="fuoriserie.html" class="nav-link">Fuoriserie</a>
+            <a href="contatti.html" class="nav-link">Contatti</a>        </nav>
+        <section class="modello-auto fade-in">
+            <div class="model-grid">
+                <div class="image-gallery-container">
+                    <div class="image-container active" data-color="bianca">
+                        <img src="immagini/ES7 TRACK FRONTALE BIANCA.jpg" alt="ES7 Track - Frontale Bianca" class="active">
+                        <img src="immagini/ES7 TRACK RETRO BIANCA.png" alt="ES7 Track - Posteriore Bianca">
+                    </div>
+                    <div class="image-container" data-color="grigio">
+                        <img src="immagini/ES7 TRACK FRONTALE GRIGIO.jpg" alt="ES7 Track - Frontale Grigio" class="active">
+                        <img src="immagini/ES7 TRACK RETRO GRIGIO.png" alt="ES7 Track - Posteriore Grigio">
+                    </div>
+                    <div class="image-container" data-color="nero">
+                        <img src="immagini/ES7 TRACK FRONTALE NERO.jpg" alt="ES7 Track - Frontale Nero" class="active">
+                        <img src="immagini/ES7 TRACK RETRO NERO.png" alt="ES7 Track - Posteriore Nero">
+                    </div>
+                    <div class="gallery-controls">
+                        <button class="gallery-prev">&#10094;</button>
+                        <button class="gallery-next">&#10095;</button>
+                    </div>
+                </div>
+                <div class="info-container">
+                    <h2>ES7 Track</h2>
+                    <p class="car-tagline">Progettata per la pista, perfetta per l'avventura.</p>
+                    <div class="specs-grid">
+                        <div class="spec-item">
+                            <strong>Motore</strong>
+                            <span>Ibrido Plug-in</span>
+                        </div>
+                        <div class="spec-item">
+                            <strong>Potenza</strong>
+                            <span>800 CV</span>
+                        </div>
+                        <div class="spec-item">
+                            <strong>Accelerazione</strong>
+                            <span>0-100 km/h in 2.6s</span>
+                        </div>
+                        <div class="spec-item">
+                            <strong>Peso</strong>
+                            <span>1850 kg</span>
+                        </div>
+                    </div>
+                    <div class="color-options">
+                        <button class="btn-color active" data-target="bianca">Bianca</button>
+                        <button class="btn-color" data-target="grigio">Grigio</button>
+                        <button class="btn-color" data-target="nero">Nero</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>&copy; 2025 Brand Automobilistico. Tutti i diritti riservati.</p>
+        </footer>
+    </div>
+    <div id="media-modal" class="modal">
+        <span class="modal-close">&times;</span>
+        <div class="modal-content"></div>
+        <div class="modal-nav">
+            <a class="modal-prev">&#10094;</a>
+            <a class="modal-next">&#10095;</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

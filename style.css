@@ -1,4 +1,4 @@
-//* Importazione Font */
+/* Importazione Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 /* Variabili e Stili Generali */
@@ -7,7 +7,8 @@
     --secondary-color: #32CD32; /* Verde Lime */
     --bg-dark: #222; /* Grigio Scurissimo */
     --bg-light: #333; /* Grigio Scuro */
-    --text-color: #f4f4f4;
+    --text-color-light: #f4f4f4;
+    --text-color-dark: #1a1a1a;
 }
 
 body {
@@ -15,37 +16,14 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--bg-dark);
-    color: var(--text-color);
+    color: var(--text-color-light);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
 }
 
-.page {
-    display: none;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
-    width: 100%;
-    min-height: 100vh;
-}
-
-.page.active {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.modello-auto:nth-of-type(odd) {
-    background-color: var(--bg-light);
-}
-
-.modello-auto:nth-of-type(even) {
-    background-color: var(--bg-dark);
-}
-
 /* Header */
-#home .main-header {
+.main-header {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -53,9 +31,10 @@ body {
     align-items: center;
     position: relative;
     overflow: hidden;
+    text-align: center;
 }
 
-.header-video {
+.home-header .header-video {
     position: absolute;
     top: 0;
     left: 0;
@@ -66,28 +45,48 @@ body {
     filter: brightness(0.5);
 }
 
-.logo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+.modelli-header .header-video,
+.fuoriserie-header .header-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    margin-bottom: 25px;
-    border: 3px solid var(--primary-color);
+    z-index: -1;
+    filter: brightness(0.6);
 }
 
-#home h1 {
+.logo-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 25px;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 0 15px rgba(160, 32, 240, 0.5);
+}
+
+.main-header h1 {
     font-size: 4em;
     font-weight: 700;
     letter-spacing: 4px;
     text-transform: uppercase;
     color: var(--secondary-color);
     margin: 0;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
 }
 
-#home p {
+.main-header p {
     font-size: 1.5em;
     font-weight: 300;
-    color: var(--text-color);
+    color: var(--text-color-light);
     margin-top: 10px;
 }
 
@@ -105,7 +104,7 @@ body {
 }
 
 .nav-link {
-    color: var(--text-color);
+    color: var(--text-color-light);
     text-decoration: none;
     padding: 12px 25px;
     margin: 5px 10px;
@@ -125,7 +124,45 @@ body {
     border: 1px solid var(--primary-color);
 }
 
-/* Layout della Pagina */
+/* Menu a tendina */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--bg-dark);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 8px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fadeInDropdown 0.3s ease-in-out;
+}
+
+.dropdown-content a {
+    color: var(--text-color-light);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--bg-light);
+    color: var(--secondary-color);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Sezioni Modelli e Fuoriserie */
 .modello-auto {
     padding: 80px 20px;
     text-align: center;
@@ -150,7 +187,62 @@ body {
     padding: 20px;
 }
 
-/* Contenuto Dinamico */
+.modelli-catalogo {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.modello-item {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-light);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.modello-item:hover {
+    transform: translateY(-5px);
+}
+
+.modello-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.modello-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.modello-info h3 {
+    font-size: 2em;
+    color: var(--secondary-color);
+}
+
+.btn-cta {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 15px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-cta:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+/* Modelli Singoli e Visione */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -191,28 +283,22 @@ body {
 }
 
 .gallery-controls {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
-    gap: 15px;
+    justify-content: space-between;
+    padding: 10px 0;
 }
 
-.gallery-prev, .gallery-next {
-    background: rgba(0, 0, 0, 0.6);
-    color: var(--secondary-color);
+.gallery-controls button {
+    background-color: transparent;
     border: none;
-    padding: 15px;
-    border-radius: 50%;
+    color: var(--text-color-light);
+    font-size: 2em;
     cursor: pointer;
-    font-size: 1.5em;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s, transform 0.2s ease;
+    transition: color 0.2s;
+}
+
+.gallery-controls button:hover {
+    color: var(--primary-color);
 }
 
 /* Dettagli Auto */
@@ -223,71 +309,62 @@ body {
     color: var(--secondary-color);
 }
 
-.car-tagline {
-    font-size: 1.1em;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    color: var(--text-color);
-}
-
 .specs-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-    margin-bottom: 40px;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 30px;
 }
 
 .spec-item {
     background-color: var(--bg-dark);
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    text-align: left;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .spec-item strong {
     display: block;
     color: var(--primary-color);
-    font-weight: 600;
-    margin-bottom: 5px;
+    font-size: 1.1em;
 }
 
 .spec-item span {
-    font-size: 1em;
-    color: var(--text-color);
+    display: block;
+    font-size: 0.9em;
+    margin-top: 5px;
 }
 
 .color-options {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .btn-color {
-    padding: 12px 25px;
-    border: 2px solid var(--primary-color);
-    border-radius: 30px;
-    background-color: transparent;
-    color: var(--text-color);
+    width: 40px;
+    height: 40px;
+    border: 2px solid transparent;
+    border-radius: 50%;
     cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: 600;
-}
-
-.btn-color.active {
-    background-color: var(--primary-color);
-    color: var(--bg-dark);
-    transform: scale(1.05);
+    margin: 0 5px;
+    transition: transform 0.2s, border-color 0.2s;
 }
 
 .btn-color:hover {
-    background-color: var(--secondary-color);
-    color: var(--bg-dark);
-    transform: scale(1.05);
+    transform: scale(1.1);
+}
+
+.btn-color.active {
     border-color: var(--secondary-color);
 }
+
+[data-target="bianco"] { background-color: #f0f0f0; }
+[data-target="nero"] { background-color: #1a1a1a; }
+[data-target="rosso"] { background-color: #ff0000; }
+[data-target="grigio"] { background-color: #888888; }
+[data-target="scura"] { background-color: #3d3d3d; }
+[data-target="giallo"] { background-color: #ffcc00; }
+[data-target="bianca"] { background-color: #f0f0f0; }
+[data-target="nera"] { background-color: #1a1a1a; }
 
 /* Sezione Concept */
 .concept-section {
@@ -295,47 +372,34 @@ body {
     background-color: var(--bg-light);
     border-top: 1px solid #444;
     margin-top: 40px;
-}
-
-.concept-section h3 {
-    font-size: 2.5em;
-    font-weight: 700;
-    margin-bottom: 15px;
-    color: var(--secondary-color);
+    text-align: center;
 }
 
 .concept-images-scroller {
     display: flex;
     overflow-x: auto;
-    gap: 30px;
-    padding: 20px;
-    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px 0;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: thin;
-    scrollbar-color: var(--primary-color) var(--bg-dark);
 }
 
 .concept-item {
-    flex: 0 0 auto;
-    width: 80vw;
-    max-width: 700px;
-    scroll-snap-align: center;
+    flex-shrink: 0;
+    width: 300px;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 30px;
-    background-color: var(--bg-dark);
-    color: var(--text-color);
-    font-size: 0.9em;
-    margin-top: 20px;
+.concept-item img, .concept-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-/* MODALE PER IMMAGINI/VIDEO */
+/* Modale per immagini e video */
 .modal {
     display: none;
     position: fixed;
@@ -344,57 +408,109 @@ footer {
     top: 0;
     width: 100%;
     height: 100%;
+    overflow: auto;
     background-color: rgba(0, 0, 0, 0.9);
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    animation: fadeInModal 0.3s ease-in-out;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+}
+
+.modal-content img, .modal-content video {
+    display: block;
+    max-width: 100%;
+    max-height: 100vh;
+    border-radius: 12px;
 }
 
 .modal-close {
     position: absolute;
     top: 20px;
     right: 35px;
-    color: var(--text-color);
+    color: #fff;
     font-size: 40px;
     font-weight: bold;
+    transition: 0.3s;
     cursor: pointer;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: var(--primary-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Navigazione modale */
+.modal-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    transform: translateY(-50%);
+}
+
+.modal-nav a {
+    color: #fff;
+    font-size: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+.modal-nav a:hover {
+    color: var(--secondary-color);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--bg-dark);
+    color: var(--text-color-light);
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+
+/* Animazioni Chiave */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDropdown {
+    from { opacity: 0; transform: translateY(-10px) translateX(-50%); }
+    to { opacity: 1; transform: translateY(0) translateX(-50%); }
+}
+
+@keyframes fadeInModal {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
 }
 
 /* ------------------------------------------- */
 /* MEDIA QUERIES (DESKTOP)           */
 /* ------------------------------------------- */
 @media (min-width: 992px) {
-    #home h1 { font-size: 5em; }
-    #home p { font-size: 1.8em; }
-
-    .main-header.modelli h1, .main-header.fuoriserie-page h1 { font-size: 4em; }
-    .main-header.modelli p, .main-header.fuoriserie-page p { font-size: 1.3em; }
-
     .model-grid {
         flex-direction: row;
         text-align: left;
     }
-    .modello-auto:nth-of-type(odd) .info-container {
-        order: -1;
+
+    .modello-item {
+        flex-direction: row;
+        text-align: left;
     }
-
-    .info-container h2 { font-size: 3.5em; }
-    .car-tagline { font-size: 1.2em; }
-
-    .specs-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-    }
-
-    .color-options {
-        justify-content: flex-start;
-    }
-
-    .concept-images-scroller {
-        padding: 20px 0;
-    }
-
-    .concept-item {
-        width: 30vw;
+    
+    .modello-item:nth-of-type(even) {
+        flex-direction: row-reverse;
     }
 }

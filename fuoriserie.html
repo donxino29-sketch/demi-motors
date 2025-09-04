@@ -3,23 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DEMI - Fuori Serie</title>
+    <title>Fuoriserie - Brand Automobilistico</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <section id="fuoriserie-page" class="page active fuoriserie-page">
-        <header class="main-header">
-            <a href="index.html" class="nav-link back-link">&lt; Torna alla Home</a>
-            <img src="immagini/demi_logo.jpg" alt="Logo del Brand DEMI" class="logo">
-            <h1>DEMI</h1>
-            <p>Modelli Fuori Serie - Nati per la pista</p>
+    <div id="fuoriserie" class="page active">
+        <header class="main-header fuoriserie-header">
+            <video class="header-video" autoplay muted loop playsinline>
+                <source src="video/DEMI SCLM VIDEO TRACK RETRO.mp4" type="video/mp4" >
+            </video>
+            <h1>Fuoriserie</h1>
+            <p>L'apice dell'ingegneria e del design. Pezzi unici per veri intenditori.</p>
         </header>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="modelli.html" class="nav-link">Panoramica</a>
+            <div class="dropdown">
+                <a href="#" class="nav-link active">Tutti i Modelli</a>
+                <div class="dropdown-content">
+                    <a href="velora.html" class="active">Velora</a>
+                    <a href="es5.html">Demi ES5</a>
+                    <a href="sb5.html">Demi SB5</a>
+                    <a href="es7.html">ES7</a>
+                    <a href="es7_track.html">ES7 Track</a>
+                    <a href="sc7.html">SC7</a>
+                </div>
+            </div>
+            <a href="fuoriserie.html" class="nav-link">Fuoriserie</a>
+            <a href="contatti.html" class="nav-link">Contatti</a>
+        </nav>
+        
+        <section class="modello-auto fade-in">
+            <div class="model-grid">
+                <div class="image-gallery-container">
+                    <div id="velora-strix-gallery" class="image-container active">
+                        <img src="immagini/VELORA STRIX FRONTALE NERO.jpg" alt="Velora Strix Frontale" class="active">
+                        <img src="immagini/VELORA STRIX RETRO NERO.jpg" alt="Velora Strix Retro">
+                    </div>
+                    <div class="gallery-controls">
+                        <button class="gallery-prev">&#10094;</button>
+                        <button class="gallery-next">&#10095;</button>
+                    </div>
+                </div>
+                <div class="info-container">
+                    <h2>Velora Strix</h2>
+                    <p class="car-tagline">La Velora portata all'estremo, per una performance ineguagliabile.</p>
+                    <div class="specs-grid">
+                        <div class="spec-item">
+                            <strong>Motore</strong>
+                            <span>V10 Biturbo</span>
+                        </div>
+                        <div class="spec-item">
+                            <strong>Potenza</strong>
+                            <span>850 CV</span>
+                        </div>
+                        <div class="spec-item">
+                            <strong>Omologazione</strong>
+                            <span>Solo per uso pista</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <section id="esgt3" class="modello-auto">
+        <section class="modello-auto fade-in">
+            <div class="model-grid">
+                <div class="image-gallery-container">
+                    <div id="sc7-track-gallery" class="image-container active">
+                        <img src="immagini/SC7 TRACK FRONTALE NERO.jpg" alt="SC7 Track Frontale" class="active">
+                        <img src="immagini/SC7 TRACK RETRO GRIGIO.jpg" alt="SC7 Track Retro">
+                    </div>
+                    <div class="gallery-controls">
+                        <button class="gallery-prev">&#10094;</button>
+                        <button class="gallery-next">&#10095;</button>
+                    </div>
+                </div>
+                <div class="info-container">
+                    <h2>SC7 Track</h2>
+                    <p class="car-tagline">Versione da pista della nostra hypercar elettrica.</p>
+                    <div class="specs-grid">
+                        <div class="spec-item">
+                            <strong>Motore</strong>
+                            <span>Elettrico</span>
+                        </div>
+                        <div class="spec-item">
+                            <strong>Potenza</strong>
+                            <span>950 CV</span>
+                        </div>
+                        <div class="spec-item">
+                            <strong>Omologazione</strong>
+                            <span>Solo per uso pista</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="modello-auto fade-in">
             <div class="model-grid">
                 <div class="image-gallery-container">
                     <div id="esgt3-gallery" class="image-container active">
@@ -27,17 +107,16 @@
                         <img src="immagini/DEMI ESGT3 RETRO.png" alt="DEMI ESGT3 Retro">
                     </div>
                     <div class="gallery-controls">
-                        <button class="gallery-prev">&lt;</button>
-                        <button class="gallery-next">&gt;</button>
+                        <button class="gallery-prev">&#10094;</button>
+                        <button class="gallery-next">&#10095;</button>
                     </div>
                 </div>
                 <div class="info-container">
                     <h2>ESGT3</h2>
                     <p class="car-tagline">Nata per la competizione. La ESGT3 è una vera auto da corsa, progettata e omologata per dominare le competizioni GT3 in tutto il mondo.</p>
-                    
                     <div class="specs-grid">
                         <div class="spec-item">
-                            <strong>Omologazione:</strong>
+                            <strong>Omologazione</strong>
                             <span>Solo per uso pista e competizioni GT3</span>
                         </div>
                     </div>
@@ -45,7 +124,7 @@
             </div>
         </section>
 
-        <section id="sgt3" class="modello-auto">
+        <section class="modello-auto fade-in">
             <div class="model-grid">
                 <div class="image-gallery-container">
                     <div id="sgt3-gallery" class="image-container active">
@@ -53,21 +132,20 @@
                         <img src="immagini/DEMI SGT3 RETRO.png" alt="DEMI SGT3 Retro">
                     </div>
                     <div class="gallery-controls">
-                        <button class="gallery-prev">&lt;</button>
-                        <button class="gallery-next">&gt;</button>
+                        <button class="gallery-prev">&#10094;</button>
+                        <button class="gallery-next">&#10095;</button>
                     </div>
                 </div>
                 <div class="info-container">
                     <h2>SGT3</h2>
                     <p class="car-tagline">Performance senza compromessi. La SGT3 è una vettura da corsa pura, con un kit aerodinamico avanzato per un'eccezionale deportanza in pista.</p>
-                    
                     <div class="specs-grid">
                         <div class="spec-item">
-                            <strong>Omologazione:</strong>
+                            <strong>Omologazione</strong>
                             <span>Solo per uso pista</span>
                         </div>
                         <div class="spec-item">
-                            <strong>Aerodinamica:</strong>
+                            <strong>Aerodinamica</strong>
                             <span>Kit maggiorato anteriore e posteriore</span>
                         </div>
                     </div>
@@ -75,7 +153,7 @@
             </div>
         </section>
 
-        <section id="sclm" class="modello-auto">
+        <section class="modello-auto fade-in">
             <div class="model-grid">
                 <div class="image-gallery-container">
                     <div id="sclm-gallery" class="image-container active">
@@ -83,21 +161,20 @@
                         <img src="immagini/DEMI SCLM RETRO.png" alt="DEMI SCLM Retro">
                     </div>
                     <div class="gallery-controls">
-                        <button class="gallery-prev">&lt;</button>
-                        <button class="gallery-next">&gt;</button>
+                        <button class="gallery-prev">&#10094;</button>
+                        <button class="gallery-next">&#10095;</button>
                     </div>
                 </div>
                 <div class="info-container">
                     <h2>SCLM</h2>
                     <p class="car-tagline">L'apice della tecnologia da corsa. La SCLM è il nostro prototipo per il Campionato Endurance, un concentrato di innovazione e resistenza.</p>
-                    
                     <div class="specs-grid">
                         <div class="spec-item">
-                            <strong>Omologazione:</strong>
+                            <strong>Omologazione</strong>
                             <span>Solo per uso pista</span>
                         </div>
                         <div class="spec-item">
-                            <strong>Campionato:</strong>
+                            <strong>Campionato</strong>
                             <span>LMH (Le Mans Hypercar)</span>
                         </div>
                     </div>
@@ -106,10 +183,17 @@
         </section>
         
         <footer>
-            <p>&copy; 2025 DEMI. Tutti i diritti riservati.</p>
+            <p>&copy; 2025 Brand Automobilistico. Tutti i diritti riservati.</p>
         </footer>
-    </section>
-    
+    </div>
+    <div id="media-modal" class="modal">
+        <span class="modal-close">&times;</span>
+        <div class="modal-content"></div>
+        <div class="modal-nav">
+            <a class="modal-prev">&#10094;</a>
+            <a class="modal-next">&#10095;</a>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,32 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    // Gestione della navigazione tra le sezioni
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const pages = document.querySelectorAll('.page');
-            
-            pages.forEach(page => {
-                page.classList.remove('active');
-            });
-            
-            const targetPage = document.getElementById(targetId);
-            if (targetPage) {
-                targetPage.classList.add('active');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-            
-            navLinks.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-        });
-    });
-
-    // Inizializza la pagina di default (Home)
-    document.getElementById('home').classList.add('active');
-    document.querySelector('a[href="#home"]').classList.add('active');
-
     // Funzione per inizializzare le gallerie su ogni sezione
     function initializeGalleries() {
         const modelloAutoSections = document.querySelectorAll('.modello-auto');
@@ -130,8 +103,8 @@ document.addEventListener('DOMContentLoaded', function() {
         let clickedElement = e.target;
         if (clickedElement.closest('.concept-item')) {
             clickedElement = clickedElement.closest('.concept-item').querySelector('img, video');
-        } else if (clickedElement.closest('.image-gallery-container') && clickedElement.tagName === 'IMG') {
-            clickedElement = clickedElement.closest('.image-container.active').querySelector('img.active');
+        } else if (clickedElement.closest('.image-gallery-container') && clickedElement.tagName === 'IMG' && clickedElement.classList.contains('active')) {
+            clickedElement = clickedElement;
         } else {
             return;
         }
@@ -204,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeGalleries();
 
     // Animazioni On-Scroll
-    const elementsToAnimate = document.querySelectorAll('.modello-auto, .concept-section');
+    const elementsToAnimate = document.querySelectorAll('.modello-auto, .modello-item, .concept-section, .home-intro');
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
