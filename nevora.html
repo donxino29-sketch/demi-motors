@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nevora - Brand Automobilistico</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Aggiunta di stili base per le nuove sezioni, per garantire un rendering corretto */
+        .section {
+            padding: 80px 0;
+            text-align: center;
+        }
+        .section-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .section p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+        .image-row {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .image-row img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+            text-align: left;
+        }
+        .spec-item {
+            background: #333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .spec-item strong {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div id="nevora" class="page active">
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="modelli.html" class="nav-link">Panoramica</a>
+            <div class="dropdown">
+                <a href="#" class="nav-link active">Tutti i Modelli</a>
+                <div class="dropdown-content">
+                    <a href="velora.html">Velora</a>
+                    <a href="nevora.html">Nevora</a>
+                    <a href="mythoma.html">Mythoma</a>
+                    <a href="es5.html">ES5</a>
+                    <a href="sb5.html">SB5</a>
+                    <a href="es7.html">ES7</a>
+                    <a href="es7_track.html">ES7 Track</a>
+                    <a href="sc7.html">SC7</a>
+                </div>
+            </div>
+            <a href="fuoriserie.html" class="nav-link">Fuoriserie</a>
+            <a href="contatti.html" class="nav-link">Contatti</a>
+        </nav>
+
+        <section class="modello-auto fade-in">
+            <div class="model-grid">
+                <div class="image-gallery-container">
+                    <div class="image-container active" data-color="grigio">
+                        <img src="immagini/DEMI NEVORA FRONTALE GRIGIO.jpg" alt="Nevora - Vista Frontale Grigia" class="active">
+                        <img src="immagini/DEMI NEVORA RETRO GRIGIO.jpg" alt="Nevora - Vista Posteriore Grigia">
+                    </div>
+                    <div class="image-container" data-color="bianco">
+                        <img src="immagini/DEMI NEVORA FRONTALE BIANCO.jpg" alt="Nevora - Vista Frontale Bianca">
+                        <img src="immagini/DEMI NEVORA RETRO BIANCO.jpg" alt="Nevora - Vista Posteriore Bianca">
+                    </div>
+                    <div class="image-container" data-color="nero">
+                        <img src="immagini/DEMI NEVORA FRONTALE NERO.jpg" alt="Nevora - Vista Frontale Nera">
+                        <img src="immagini/DEMI NEVORA RETRO NERO.jpg" alt="Nevora - Vista Posteriore Nera">
+                    </div>
+                    <div class="gallery-controls">
+                        <button class="gallery-prev">&#10094;</button>
+                        <button class="gallery-next">&#10095;</button>
+                    </div>
+                </div>
+                <div class="info-container">
+                    <h2>Demi Nevora</h2>
+                    <p class="car-tagline">La berlina che unisce praticità ed efficienza senza compromessi.</p>
+                    <div class="specs-grid">
+                        <div class="spec-item">
+                            <strong>Powertrain</strong>
+                            <span>Ibrido con Range Extender</span>
+                        </div>
+                        <div class="spec-item">
+                            <strong>Potenza</strong>
+                            <span>204 CV</span>
+                        </div>
+                        <div class="spec-item">
+                            <strong>Coppia</strong>
+                            <span>350 Nm</span>
+                        </div>
+                        <div class="spec-item">
+                            <strong>Dimensioni</strong>
+                            <span>4.65m x 1.99m x 1.44m</span>
+                        </div>
+                    </div>
+                    <div class="color-options">
+                        <button class="btn-color active" data-target="grigio">Grigio</button>
+                        <button class="btn-color" data-target="bianco">Bianco</button>
+                        <button class="btn-color" data-target="nero">Nero</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        ---
+
+        <section class="section esterni-section" id="esterni">
+            <div class="section-content">
+                <h2>Design Moderno ed Essenziale</h2>
+                <p>La Nevora sfoggia un design da berlina sportiva, con linee slanciate e un profilo aerodinamico che ne accentuano l'eleganza. La firma luminosa a LED anteriore e posteriore a tutta larghezza conferisce un aspetto futuristico e distintivo. I dettagli raffinati, come i cerchi in lega bicolore e i terminali di scarico doppi, sottolineano il carattere dinamico dell'auto, rendendola un punto di riferimento di stile nel suo segmento.</p>
+                <div class="image-row">
+                    <img src="immagini/DEMI NEVORA FRONTALE GRIGIO.jpg" alt="Nevora Vista Frontale Grigia">
+                    <img src="immagini/DEMI NEVORA RETRO BIANCO.jpg" alt="Nevora Vista Posteriore Bianca">
+                    <img src="immagini/DEMI NEVORA FRONTALE NERO.jpg" alt="Nevora Vista Frontale Nera">
+                    <img src="immagini/DEMI NEVORA RETRO GRIGIO.jpg" alt="Nevora Vista Posteriore Grigia">
+                </div>
+            </div>
+        </section>
+
+        ---
+
+        <section class="section interni-section" id="interni">
+            <div class="section-content">
+                <h2>Abitacolo Funzionale e Confortevole</h2>
+                <p>Gli interni della Nevora sono pensati per combinare ergonomia e comfort. Il cruscotto digitale e lo schermo infotainment centrale da 12 pollici offrono un controllo completo e intuitivo delle funzioni dell'auto. I sedili sportivi in pelle nera con cuciture a contrasto non solo sono eleganti, ma garantiscono un supporto ottimale durante la guida. L'abitacolo spazioso offre comfort sia per il guidatore che per i passeggeri posteriori, rendendo ogni viaggio un'esperienza piacevole.</p>
+                <div class="image-row">
+                    <img src="immagini/DEMI NEVORA POV.jpg" alt="Nevora Visuale del cruscotto">
+                    <img src="immagini/DEMI NEVORA POV 2.jpg" alt="Nevora Visuale del cruscotto">
+                    <img src="immagini/DEMI NEVORA SEDILI ANTERIORI.jpg" alt="Nevora Sedili Anteriori">
+                    <img src="immagini/DEMI NEVORA SEDILI POSTERIORI.jpg" alt="Nevora Sedili Posteriori">
+                </div>
+            </div>
+        </section>
+
+        ---
+
+        <section class="section powertrain-section" id="powertrain">
+            <div class="section-content">
+                <h2>L'Efficienza di un Powertrain Ibrido</h2>
+                <p>La Nevora è spinta da un innovativo powertrain ibrido con **trazione posteriore elettrica** e un **range extender a benzina** a 4 cilindri. Questo sistema garantisce un'esperienza di guida fluida e silenziosa, unita alla sicurezza di avere un'autonomia estesa grazie al motore termico che funge da generatore. Con una potenza di **204 CV** e una coppia di **350 Nm**, la Nevora offre prestazioni brillanti, mantenendo bassi i consumi e le emissioni. È la soluzione perfetta per chi cerca il meglio dell'elettrico e del tradizionale.</p>
+                <div class="image-row">
+                    <img src="immagini/DEMI NEVORA POWERTRAIN.jpg" alt="Nevora Powertrain">
+                    <img src="immagini/DEMI NEVORA VANO MOTORE.jpg" alt="Nevora Vano Motore">
+                </div>
+            </div>
+        </section>
+
+        ---
+
+        <section class="section bagagliaio-section" id="bagagliaio">
+            <div class="section-content">
+                <h2>Spazio e Versatilità</h2>
+                <p>Nonostante la sua linea da berlina sportiva, la Nevora offre un vano bagagli sorprendentemente spazioso e funzionale. La sua forma regolare e la capacità generosa lo rendono ideale per le esigenze di tutti i giorni e per i viaggi più lunghi, dimostrando che stile e praticità possono convivere in perfetta armonia.</p>
+                <div class="image-row">
+                    <img src="immagini/DEMI NEVORA VANO BAGAGLI.jpg" alt="Nevora Vano Bagagli">
+                </div>
+            </div>
+        </section>
+
+        ---
+
+        <footer>
+            <p>&copy; 2025 Brand Automobilistico. Tutti i diritti riservati.</p>
+        </footer>
+    </div>
+    <div id="media-modal" class="modal">
+        <span class="modal-close">&times;</span>
+        <div class="modal-content"></div>
+        <div class="modal-nav">
+            <a class="modal-prev">&#10094;</a>
+            <a class="modal-next">&#10095;</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

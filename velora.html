@@ -5,6 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Velora - Brand Automobilistico</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Aggiunta di stili base per le nuove sezioni, per garantire un rendering corretto */
+        .section {
+            padding: 80px 0;
+            text-align: center;
+        }
+        .section-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .section p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+        .image-row {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .image-row img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
 <body>
     <div id="velora" class="page active">
@@ -14,9 +48,11 @@
             <div class="dropdown">
                 <a href="#" class="nav-link active">Tutti i Modelli</a>
                 <div class="dropdown-content">
-                    <a href="velora.html" class="active">Velora</a>
-                    <a href="es5.html">Demi ES5</a>
-                    <a href="sb5.html">Demi SB5</a>
+                    <a href="velora.html">Velora</a>
+                    <a href="nevora.html">Nevora</a>
+                    <a href="mythoma.html">Mythoma</a>
+                    <a href="es5.html">ES5</a>
+                    <a href="sb5.html">SB5</a>
                     <a href="es7.html">ES7</a>
                     <a href="es7_track.html">ES7 Track</a>
                     <a href="sc7.html">SC7</a>
@@ -25,20 +61,19 @@
             <a href="fuoriserie.html" class="nav-link">Fuoriserie</a>
             <a href="contatti.html" class="nav-link">Contatti</a>
         </nav>
+
         <section class="modello-auto fade-in">
             <div class="model-grid">
                 <div class="image-gallery-container">
                     <div class="image-container active" data-color="bianco">
-                        <img src="immagini/VELORA FRONTALE BIANCO.jpg" alt="Velora - Vista Frontale Bianca" class="active">
-                        <img src="immagini/VELORA RETRO BIANCO.jpg" alt="Velora - Vista Posteriore Bianca">
+                        <img src="immagini/VELORA FRONTE.jpg" alt="Velora - Vista Frontale Bianca" class="active">
+                        <img src="immagini/VELORA RETRO.jpg" alt="Velora - Vista Posteriore Bianca">
+                        <img src="immagini/VELORA LATERALE BIANCO.jpg" alt="Velora - Vista Laterale Bianca">
                     </div>
                     <div class="image-container" data-color="nero">
-                        <img src="immagini/VELORA FRONTALE NERO.jpg" alt="Velora - Vista Frontale Nera" class="active">
-                        <img src="immagini/VELORA RETRO NERO.jpg" alt="Velora - Vista Posteriore Nera">
-                    </div>
-                    <div class="image-container" data-color="rosso">
-                        <img src="immagini/VELORA INTERNO BIANCO.jpg" alt="Velora - Interni Bianchi">
-                        <img src="immagini/VELORA INTERNO ROSSO.jpg" alt="Velora - Interni Rossi" class="active">
+                        <img src="immagini/VELORA LATERALE NERO.jpg" alt="Velora - Vista Laterale Nera">
+                        <img src="immagini/VELORA VANO MOTORE.jpg" alt="Velora - Vano Motore">
+                        <img src="immagini/VELORA VANO BAGAGLI.jpg" alt="Velora - Vano Bagagli">
                     </div>
                     <div class="gallery-controls">
                         <button class="gallery-prev">&#10094;</button>
@@ -69,11 +104,63 @@
                     <div class="color-options">
                         <button class="btn-color active" data-target="bianco">Bianco</button>
                         <button class="btn-color" data-target="nero">Nero</button>
-                        <button class="btn-color" data-target="rosso">interni</button>
                     </div>
                 </div>
             </div>
         </section>
+
+        ---
+
+        <section class="section esterni-section" id="esterni">
+            <div class="section-content">
+                <h2>Design e Caratteristiche Esterne</h2>
+                <p>La Velora si distingue per le sue linee pulite e moderne che fondono eleganza e sportività. I fari a LED a tutta larghezza, sia anteriori che posteriori, creano una firma luminosa inconfondibile e proiettano un senso di avanzamento tecnologico. I cerchi in lega bicolore e le pinze freno rosse sottolineano il carattere dinamico del veicolo, mentre il profilo aerodinamico del tetto nero e dello spoiler posteriore non solo migliorano le prestazioni, ma aggiungono anche un tocco di classe distintivo.</p>
+                <div class="image-row">
+                    <img src="immagini/VELORA FRONTE.jpg" alt="Velora Vista Frontale">
+                    <img src="immagini/VELORA RETRO.jpg" alt="Velora Vista Posteriore">
+                    <img src="immagini/VELORA LATERALE BIANCO.jpg" alt="Velora Profilo Bianco">
+                    <img src="immagini/VELORA LATERALE NERO.jpg" alt="Velora Profilo Nero">
+                </div>
+            </div>
+        </section>
+
+        ---
+
+        <section class="section powertrain-section" id="powertrain">
+            <div class="section-content">
+                <h2>Powertrain e Meccanica</h2>
+                <p>Sotto il cofano, la Velora nasconde un cuore potente e tecnologicamente avanzato. Il suo powertrain ibrido combina un motore a combustione interna con componenti elettrici per offrire un equilibrio ottimale tra efficienza e prestazioni. La disposizione chiara e accessibile dei vari componenti meccanici, come il motore turbo, il sistema di scarico e l'innovativa trasmissione, dimostra l'ingegneria di precisione che sta alla base di ogni veicolo Velora. I freni a disco ventilati garantiscono una frenata sicura e reattiva in ogni condizione di guida.</p>
+                <div class="image-row">
+                    <img src="immagini/VELORA POWERTRAIN.jpg" alt="Velora Powertrain">
+                    <img src="immagini/VELORA VANO MOTORE.jpg" alt="Velora Vano Motore">
+                </div>
+            </div>
+        </section>
+
+        ---
+
+        <section class="section interni-section" id="interni">
+            <div class="section-content">
+                <h2>Comfort e Lusso degli Interni</h2>
+                <p>Entrando nell'abitacolo, si viene accolti da un ambiente di lusso e raffinatezza. I sedili sportivi bicolore, con finiture in pelle e cuciture a contrasto, offrono un supporto eccezionale e un comfort di lunga durata. Il tetto panoramico in vetro inonda l'abitacolo di luce naturale, creando un'atmosfera spaziosa e aperta. Il design minimalista della plancia è arricchito da dettagli cromati e un'illuminazione ambientale discreta. I sedili posteriori, pur mantenendo un design sportivo, garantiscono spazio sufficiente per i passeggeri, rendendo la Velora una gran turismo pratica per ogni viaggio.</p>
+                <div class="image-row">
+                    <img src="immagini/VELORA INTERNO BIANCO RETRO.jpg" alt="Velora Interni Posteriori">
+                </div>
+            </div>
+        </section>
+
+        ---
+
+        <section class="section bagagliaio-section" id="bagagliaio">
+            <div class="section-content">
+                <h2>Spazio e Versatilità</h2>
+                <p>Nonostante la sua linea sportiva, la Velora non scende a compromessi in termini di praticità. L'ampio vano bagagli, accessibile tramite un portellone elettrico, offre una capacità sorprendente per le sue dimensioni, perfetta per gite fuori porta o per l'uso quotidiano. La soglia di carico bassa e il design intelligente massimizzano la facilità d'uso, dimostrando che stile e funzionalità possono coesistere in perfetta armonia.</p>
+                <div class="image-row">
+                    <img src="immagini/VELORA VANO BAGAGLI.jpg" alt="Velora Vano Bagagli">
+                </div>
+            </div>
+        </section>
+
         <footer>
             <p>&copy; 2025 Brand Automobilistico. Tutti i diritti riservati.</p>
         </footer>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mythoma - Brand Automobilistico</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Aggiunta di stili base per le nuove sezioni, per garantire un rendering corretto */
+        .section {
+            padding: 80px 0;
+            text-align: center;
+        }
+        .section-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .section p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+        .image-row {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .image-row img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+            text-align: left;
+        }
+        .spec-item {
+            background: #333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .spec-item strong {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div id="mythoma" class="page active">
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="modelli.html" class="nav-link">Panoramica</a>
+            <div class="dropdown">
+                <a href="#" class="nav-link active">Tutti i Modelli</a>
+                <div class="dropdown-content">
+                    <a href="velora.html">Velora</a>
+                    <a href="nevora.html">Nevora</a>
+                    <a href="mythoma.html">Mythoma</a>
+                    <a href="es5.html">ES5</a>
+                    <a href="sb5.html">SB5</a>
+                    <a href="es7.html">ES7</a>
+                    <a href="es7_track.html">ES7 Track</a>
+                    <a href="sc7.html">SC7</a>
+                </div>
+            </div>
+            <a href="fuoriserie.html" class="nav-link">Fuoriserie</a>
+            <a href="contatti.html" class="nav-link">Contatti</a>
+        </nav>
+
+        <section class="modello-auto fade-in">
+            <div class="model-grid">
+                <div class="image-gallery-container">
+                    <div class="image-container active" data-color="grigio">
+                        <img src="immagini/DEMI MYTHOMA FRONTALE GRIGIO.jpg" alt="Mythoma - Vista Frontale Grigia" class="active">
+                        <img src="immagini/DEMI MYTHOMA RETRO GRIGIO.jpg" alt="Mythoma - Vista Posteriore Grigia">
+                    </div>
+                    <div class="image-container" data-color="bianco">
+                        <img src="immagini/DEMI MYTHOMA FRONTALE BIANCO.jpg" alt="Mythoma - Vista Frontale Bianca">
+                        <img src="immagini/DEMI MYTHOMA RETRO BIANCO.jpg" alt="Mythoma - Vista Posteriore Bianca">
+                    </div>
+                    <div class="image-container" data-color="nero">
+                        <img src="immagini/DEMI MYTHOMA FRONTALE NERO.jpg" alt="Mythoma - Vista Frontale Nera">
+                        <img src="immagini/DEMI MYTHOMA RETRO NERO.jpg" alt="Mythoma - Vista Posteriore Nera">
+                    </div>
+                    <div class="gallery-controls">
+                        <button class="gallery-prev">&#10094;</button>
+                        <button class="gallery-next">&#10095;</button>
+                    </div>
+                </div>
+                <div class="info-container">
+                    <h2>Demi Mythoma</h2>
+                    <p class="car-tagline">La Gran Turismo che combina lusso e potenza senza limiti.</p>
+                    <div class="specs-grid">
+                        <div class="spec-item">
+                            <strong>Powertrain</strong>
+                            <span>Full Hybrid</span>
+                        </div>
+                        <div class="spec-item">
+                            <strong>Motore Termico</strong>
+                            <span>3.0 6-cilindri Biturbo (550 CV)</span>
+                        </div>
+                        <div class="spec-item">
+                            <strong>Motore Elettrico</strong>
+                            <span>200 CV</span>
+                        </div>
+                        <div class="spec-item">
+                            <strong>Dimensioni</strong>
+                            <span>4.99m x 2.12m x 1.39m</span>
+                        </div>
+                    </div>
+                    <div class="color-options">
+                        <button class="btn-color active" data-target="grigio">Grigio</button>
+                        <button class="btn-color" data-target="bianco">Bianco</button>
+                        <button class="btn-color" data-target="nero">Nero</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        ---
+
+        <section class="section esterni-section" id="esterni">
+            <div class="section-content">
+                <h2>Design GT Aggressivo ed Elegante</h2>
+                <p>La Mythoma unisce la grazia di una Gran Turismo con la ferocia di un'auto sportiva. Le sue proporzioni imponenti e le linee scolpite suggeriscono potenza e dinamismo. Il frontale è dominato da una grande griglia a nido d'ape e da una firma luminosa a LED verticale e orizzontale, mentre il posteriore è caratterizzato da un'unica fascia luminosa a LED e un diffusore aggressivo con scarichi quadrupli, che ne sottolineano il carattere ad alte prestazioni.</p>
+                <div class="image-row">
+                    <img src="immagini/DEMI MYTHOMA VISUALE FRONTALE.jpg" alt="Mythoma Vista Frontale">
+                    <img src="immagini/DEMI MYTHOMA VISUALE RETRO.JPG" alt="Mythoma Vista Posteriore">
+                </div>
+            </div>
+        </section>
+
+        ---
+
+        <section class="section interni-section" id="interni">
+            <div class="section-content">
+                <h2>Lusso e Tecnologia a Bordo</h2>
+                <p>L'abitacolo della Mythoma è un connubio perfetto di lusso, comfort e tecnologia all'avanguardia. I sedili sportivi con inserti in pelle e cuciture a contrasto non solo offrono un supporto eccezionale, ma sono anche un'affermazione di stile. Il cruscotto completamente digitale e l'ampio schermo centrale per l'infotainment, uniti all'illuminazione d'ambiente personalizzabile, creano un'atmosfera futuristica e accogliente, perfetta per affrontare ogni viaggio.</p>
+                <div class="image-row">
+                    <img src="immagini/DEMI MYTHOMA INTERIOR.jpg" alt="Mythoma Interni">
+                    <img src="immagini/DEMI MYTHOMA INTERIOR POV.jpg" alt="Mythoma Visuale del guidatore">
+                    <img src="immagini/DEMI MYTHOMA INTERIOR SEDILI ANTERIORI.jpg" alt="Mythoma Sedili anteriori">
+                    <img src="immagini/DEMI MYTHOMA INTERIOR SEDILI POSTERIORI.jpg" alt="Mythoma Sedili posteriori">
+                    <img src="immagini/DEMI MYTHOMA INTERIOR VISUALE DA DIETRO.jpg" alt="Mythoma Visuale da dietro">
+                </div>
+            </div>
+        </section>
+
+        ---
+
+        <section class="section powertrain-section" id="powertrain">
+            <div class="section-content">
+                <h2>Prestazioni Ibride Sensazionali</h2>
+                <p>La vera anima della Mythoma risiede nel suo powertrain full hybrid. Un potente **3.0 sei cilindri in linea Biturbo da 550 CV** lavora in sinergia con un motore elettrico da **200 CV**, offrendo una spinta incredibile e un'efficienza sorprendente. Questo sistema, unito alla trazione integrale, garantisce un'accelerazione fulminea e una maneggevolezza eccezionale, sia in pista che su strada. Il vano motore, ben organizzato e rifinito con dettagli in fibra di carbonio e cavi arancioni ad alta tensione, è un capolavoro di ingegneria.</p>
+                <div class="image-row">
+                    <img src="immagini/DEMI MYTHOMA VANO MOTORE 1.jpg" alt="Mythoma Vano Motore">
+                    <img src="immagini/DEMI MYTHOMA VANO MOTORE 2.jpg" alt="Mythoma Vano Motore Dettaglio">
+                    <img src="immagini/DEMI MYTHOMA POWERTRAIN.jpg" alt="Mythoma Powertrain in sezione">
+                </div>
+            </div>
+        </section>
+
+        ---
+
+        <footer>
+            <p>&copy; 2025 Brand Automobilistico. Tutti i diritti riservati.</p>
+        </footer>
+    </div>
+    <div id="media-modal" class="modal">
+        <span class="modal-close">&times;</span>
+        <div class="modal-content"></div>
+        <div class="modal-nav">
+            <a class="modal-prev">&#10094;</a>
+            <a class="modal-next">&#10095;</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
