@@ -365,6 +365,9 @@ body {
 [data-target="giallo"] { background-color: #ffcc00; }
 [data-target="bianca"] { background-color: #f0f0f0; }
 [data-target="nera"] { background-color: #1a1a1a; }
+[data-target="viola"] { background-color: #f400a1; }
+[data-target="verde"] { background-color: #256d7b; }
+[data-target="lime"] { background-color: #32CD32; }
 
 /* Sezione Concept */
 .concept-section {
