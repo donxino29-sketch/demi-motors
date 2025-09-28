@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demi Aurora - Shooting Brake ad Alte Prestazioni</title>
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        /* Aggiunta di stili base per le nuove sezioni, per garantire un rendering corretto */
+        .section {
+            padding: 80px 0;
+            text-align: center;
+        }
+        .section-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .section p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+        .image-row {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .image-row img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+            text-align: left;
+        }
+        .spec-item {
+            background: #333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .spec-item strong {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div id="aurora" class="page active">
+        <header class="main-header home-header">
+            <video autoplay muted loop playsinline class="header-video">
+                <source src="video/aurora back.mp4" type="video/mp4">
+                Il tuo browser non supporta il tag video.
+            </video>
+            <h1>DEMI AURORA</h1>
+        </header>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="modelli.html" class="nav-link">Panoramica</a>
+            <div class="dropdown">
+                <a href="#" class="nav-link active">Tutti i Modelli</a>
+                <div class="dropdown-content">
+                    <a href="velora.html">Velora</a>
+                    <a href="nevora.html">Nevora</a>
+                    <a href="mythoma.html">Mythoma</a>
+                    <a href="aurora.html" class="active">Aurora</a> <a href="es5.html">ES5</a>
+                    <a href="sb5.html">SB5</a>
+                    <a href="es7.html">ES7</a>
+                    <a href="es7_track.html">ES7 Track</a>
+                    <a href="sc7.html">SC7</a>
+                </div>
+            </div>
+            <a href="fuoriserie.html" class="nav-link">Fuoriserie</a>
+            <a href="contatti.html" class="nav-link">Contatti</a>
+        </nav>
+
+        <section class="modello-auto fade-in">
+            <div class="model-grid">
+                <div class="image-gallery-container">
+                    <div class="image-container active" data-color="nero">
+                        <img src="immagini/AURORA FRONTALE NERO.jpg" alt="Aurora - Vista Frontale Nera" class="active" data-index="0">
+                        <img src="immagini/AURORA LATERALE NERO.jpg" alt="Aurora - Vista Laterale Nera" data-index="1">
+                        <img src="immagini/AURORA POSTERIORE NERO.jpg" alt="Aurora - Vista Posteriore Nera" data-index="2">
+                        <img src="immagini/AURORA RETRO NERO.jpg" alt="Aurora - Vista 3/4 Posteriore Nera" data-index="3">
+                        <img src="immagini/AURORA DAVANTI NERO.jpg" alt="Aurora - Vista Anteriore Nera" data-index="4">
+                    </div>
+                    <div class="image-container active" data-color="bianco">
+                        <img src="immagini/AURORA FRONTALE BIANCO.jpg" alt="Aurora - Vista Frontale Nera" class="active" data-index="0">
+                        <img src="immagini/AURORA LATERALE BIANCO.jpg" alt="Aurora - Vista Laterale Nera" data-index="1">
+                        <img src="immagini/AURORA POSTERIORE BIANCO.jpg" alt="Aurora - Vista Posteriore Nera" data-index="2">
+                        <img src="immagini/AURORA RETRO BIANCO.jpg" alt="Aurora - Vista 3/4 Posteriore Nera" data-index="3">
+                        <img src="immagini/AURORA DAVANTI BIANCO.jpg" alt="Aurora - Vista Anteriore Nera" data-index="4">
+                    </div>
+                    <div class="image-container active" data-color="grigio">
+                        <img src="immagini/AURORA FRONTALE GRIGIO.jpg" alt="Aurora - Vista Frontale Nera" class="active" data-index="0">
+                        <img src="immagini/AURORA LATERALE GRIGIO.jpg" alt="Aurora - Vista Laterale Nera" data-index="1">
+                        <img src="immagini/AURORA POSTERIORE GRIGIO.jpg" alt="Aurora - Vista Posteriore Nera" data-index="2">
+                        <img src="immagini/AURORA RETRO GRIGIO.jpg" alt="Aurora - Vista 3/4 Posteriore Nera" data-index="3">
+                        <img src="immagini/AURORA DAVANTI GRIGIO.jpg" alt="Aurora - Vista Anteriore Nera" data-index="4">
+                    </div>
+                    <div class="image-container active" data-color="viola">
+                        <img src="immagini/AURORA FRONTALE VIOLA.jpg" alt="Aurora - Vista Frontale Nera" class="active" data-index="0">
+                        <img src="immagini/AURORA LATERALE VIOLA.jpg" alt="Aurora - Vista Laterale Nera" data-index="1">
+                        <img src="immagini/AURORA POSTERIORE VIOLA.jpg" alt="Aurora - Vista Posteriore Nera" data-index="2">
+                        <img src="immagini/AURORA RETRO VIOLA.jpg" alt="Aurora - Vista 3/4 Posteriore Nera" data-index="3">
+                        <img src="immagini/AURORA DAVANTI VIOLA.jpg" alt="Aurora - Vista Anteriore Nera" data-index="4">
+                    </div>
+                    <<div class="image-container active" data-color="lime">
+                        <img src="immagini/AURORA FRONTALE LIME.jpg" alt="Aurora - Vista Frontale Nera" class="active" data-index="0">
+                        <img src="immagini/AURORA LATERALE LIME.jpg" alt="Aurora - Vista Laterale Nera" data-index="1">
+                        <img src="immagini/AURORA POSTERIORE LIME.jpg" alt="Aurora - Vista Posteriore Nera" data-index="2">
+                        <img src="immagini/AURORA RETRO LIME.jpg" alt="Aurora - Vista 3/4 Posteriore Nera" data-index="3">
+                        <img src="immagini/AURORA DAVANTI LIME.jpg" alt="Aurora - Vista Anteriore Nera" data-index="4">
+                    </div>
+                    <div class="image-container active" data-color="verde">
+                        <img src="immagini/AURORA FRONTALE VERDE SCURO.jpg" alt="Aurora - Vista Frontale Nera" class="active" data-index="0">
+                        <img src="immagini/AURORA LATERALE VERDE SCURO.jpg" alt="Aurora - Vista Laterale Nera" data-index="1">
+                        <img src="immagini/AURORA POSTERIORE VERDE SCURO.jpg" alt="Aurora - Vista Posteriore Nera" data-index="2">
+                        <img src="immagini/AURORA RETRO VERDE SCURO.jpg" alt="Aurora - Vista 3/4 Posteriore Nera" data-index="3">
+                        <img src="immagini/AURORA DAVANTI VERDE SCURO.jpg" alt="Aurora - Vista Anteriore Nera" data-index="4">
+                    </div>
+                    
+                    <div class="gallery-controls">
+                        <button class="gallery-prev">&#10094;</button>
+                        <button class="gallery-next">&#10095;</button>
+                    </div>
+                </div>
+                <div class="info-container">
+                    <h2>Demi Aurora</h2>
+                    <p class="car-tagline">L'essenza pura della guida sportiva, con l'eleganza di una Shooting Brake.</p>
+                    <div class="specs-grid">
+                        <div class="spec-item">
+                            <strong>Architettura</strong>
+                            <span>Shooting Brake 2 Porte</span>
+                        </div>
+                        <div class="spec-item">
+                            <strong>Motore</strong>
+                            <span>3.0 V6 Bi-Turbo</span>
+                        </div>
+                        <div class="spec-item">
+                            <strong>Potenza Max (Stimata)</strong>
+                            <span>580 CV</span>
+                        </div>
+                        <div class="spec-item">
+                            <strong>Trazione</strong>
+                            <span>Posteriore (RWD)</span>
+                        </div>
+                        <div class="spec-item">
+                            <strong>0-100 km/h (Stimato)</strong>
+                            <span>3.5 secondi</span>
+                        </div>
+                        <div class="spec-item">
+                            <strong>Velocità Max (Stimata)</strong>
+                            <span>315 km/h</span>
+                        </div>
+                    </div>
+                    <div class="color-options">
+                        <button class="btn-color active" data-target="nero">Nero</button>
+                        <button class="btn-color" data-target="bianco">Bianco</button>
+                        <button class="btn-color" data-target="grigio">Grigio</button>
+                        <button class="btn-color" data-target="viola">Viola</button>
+                        <button class="btn-color" data-target="lime">Lime</button>
+                        <button class="btn-color" data-target="verde">Verde</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        ---
+
+        <section class="section esterni-section" id="esterni">
+            <div class="section-content">
+                <h2>Design: Aerodinamica Scultorea</h2>
+                <p>La **Demi Aurora** reinterpreta in chiave moderna il concetto di Shooting Brake sportiva, combinando l'eleganza di una coupé con la praticità di una station wagon compatta. Le linee tese e muscolose, culminanti nel portellone inclinato, sono state ottimizzate per la massima efficienza aerodinamica. La firma luminosa posteriore a LED orizzontale, sottile e continua, insieme ai passaruota larghi e ai cerchi in lega leggera con pinze freno rosse, evidenzia il suo DNA da vera sportiva a trazione posteriore. Ogni curva è un omaggio alla performance e allo stile italiano.</p>
+                <div class="image-row">
+                    <img src="immagini/AURORA CONCEPT FRONTALE LIME.jpg" alt="Aurora Vista Frontale e Paesaggio" class="gallery-img">
+                    <img src="immagini/AURORA CONCEPT FRONTALE VERDE.jpg" alt="Aurora Vista Frontale e Casa" class="gallery-img">
+                    <img src="immagini/AURORA CONCEPT FRONTALE VERDE SCURO.jpg" alt="Aurora Vista Frontale e Paesaggio" class="gallery-img">
+                    <img src="immagini/AURORA CONCEPT RETRO VERDE.jpg" alt="Aurora Vista Posteriore e Paesaggio" class="gallery-img">
+                    <img src="immagini/AURORA CONCEPT RETRO VERDE SCURO.jpg" alt="Aurora Vista Frontale e Paesaggio" class="gallery-img">
+                    <img src="immagini/AURORA CONCEPT RETRO LIME.jpg" alt="Aurora Vista Frontale e Paesaggio" class="gallery-img">
+                </div>
+            </div>
+        </section>
+
+        ---
+
+        <section class="section interni-section" id="interni">
+            <div class="section-content">
+                <h2>Abitacolo: Focalizzato sul Pilota</h2>
+                <p>L'interno della Demi Aurora è un ambiente lussuoso e high-tech, totalmente orientato all'esperienza di guida. La plancia è dominata da un **cruscotto digitale** e un **doppio display centrale** per l'infotainment e i controlli secondari, riducendo al minimo i pulsanti fisici. Materiali pregiati come pelle Nappa, alluminio spazzolato e inserti in fibra di carbonio si fondono con l'illuminazione ambientale blu a LED, creando un'atmosfera moderna ed ergonomica. Il volante sportivo, i sedili avvolgenti e il tunnel centrale rialzato assicurano il massimo controllo e comfort durante la guida dinamica.</p>
+                <div class="image-row">
+                    <img src="immagini/AURORA DASHBOARD NERO.jpg" alt="Aurora Cruscotto e Interni" class="gallery-img">
+                    <img src="immagini/AURORA INTERNI NERO.jpg" alt="Aurora Cruscotto e Interni" class="gallery-img">
+                    <img src="immagini/AURORA VANO BAGAGLI NERO.jpg" alt="Aurora Cruscotto e Interni" class="gallery-img">
+                    <img src="immagini/AURORA DASHBOARD BIANCO.jpg" alt="Aurora Cruscotto e Interni" class="gallery-img">
+                    <img src="immagini/AURORA INTERNI BIANCO.jpg" alt="Aurora Cruscotto e Interni" class="gallery-img">
+                    <img src="immagini/AURORA VANO BAGAGLI BIANCO.jpg" alt="Aurora Cruscotto e Interni" class="gallery-img">
+                </div>
+            </div>
+        </section>
+
+        ---
+
+        <section class="section powertrain-section" id="powertrain">
+            <div class="section-content">
+                <h2>Motore: La Forza del V6 Bi-Turbo</h2>
+                <p>Il cuore pulsante della Aurora è un **3.0 litri a 6 cilindri in linea bi-turbo** di nuova generazione, progettato per offrire una curva di coppia eccezionalmente piatta e una risposta immediata. Eroga una potenza massima di **580 CV** e una coppia che supera i 700 Nm, gestita da un cambio automatico a doppia frizione ottimizzato per cambiate fulminee. La configurazione a **trazione posteriore (RWD)** garantisce un'esperienza di guida pura e coinvolgente, esaltando il bilanciamento dinamico di questo telaio leggero. Il vano motore è un concentrato di ingegneria, con dettagli in fibra di carbonio e cavi ad alta tensione.</p>
+                <div class="image-row">
+                    <img src="immagini/AURORA POWERTRAIN.jpg" alt="Aurora Dettaglio Vano Motore" class="gallery-img">
+                    <img src="immagini/AURORA ENGINE.jpg" alt="Aurora Dettaglio Vano Motore" class="gallery-img">
+                    <img src="immagini/AURORA ENGINE ZOOM.jpg" alt="Aurora Dettaglio Vano Motore" class="gallery-img">
+                </div>
+            </div>
+        </section>
+
+        ---
+
+        <footer>
+            <p>&copy; 2025 Demi Automobili - Aurora. Tutti i diritti riservati.</p>
+        </footer>
+    </div>
+    
+    <div id="media-modal" class="modal">
+        <span class="modal-close">&times;</span>
+        <div class="modal-content"></div>
+        <div class="modal-nav">
+            <a class="modal-prev">&#10094;</a>
+            <a class="modal-next">&#10095;</a>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
