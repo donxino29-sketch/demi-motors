@@ -95,7 +95,26 @@
                 <a href="contatti.html" class="topbar-link">Contatti</a>
             </div>
         </nav>
+        <!-- Burger menu button for mobile -->
+        <button class="burger-menu" id="burger-menu" aria-label="Apri menu di navigazione">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
+    <!-- Mobile sidebar navigation -->
+    <nav class="mobile-sidebar" id="mobile-sidebar">
+        <div class="sidebar-header">
+            <img src="immagini/demi_logo.jpg" alt="Logo DEMI Motors" class="sidebar-logo">
+            <button class="close-sidebar" id="close-sidebar" aria-label="Chiudi menu">&times;</button>
+        </div>
+        <ul class="sidebar-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="modelli.html">Modelli</a></li>
+            <li><a href="fuoriserie.html">Fuoriserie</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+    </nav>
     <div id="aurora" class="page active">
         <header class="main-header home-header">
             <video autoplay muted loop playsinline class="header-video">
@@ -193,6 +212,10 @@
                         <div class="spec-item">
                             <strong>Velocità Max (Stimata)</strong>
                             <span>315 km/h</span>
+                        </div>
+                        <div class="spec-item" style="grid-column: 1/-1; text-align: center;">
+                            <strong style="color:#bfff00;font-size:1.3em;">Prezzo a partire da</strong>
+                            <span style="color:#32CD32;font-size:1.7em;font-weight:700;">€52.900</span>
                         </div>
                     </div>
                     <!-- bottoni colore spostati sopra -->

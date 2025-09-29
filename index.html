@@ -32,10 +32,49 @@
                         <a href="contatti.html" class="topbar-link">Contatti</a>
                     </div>
                 </nav>
+                    <!-- Burger menu button for mobile -->
+                    <button class="burger-menu" id="burger-menu" aria-label="Apri menu di navigazione">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
             </header>
+                <!-- Mobile sidebar navigation -->
+                <nav class="mobile-sidebar" id="mobile-sidebar">
+                    <div class="sidebar-header">
+                        <img src="immagini/demi_logo.jpg" alt="Logo DEMI Motors" class="sidebar-logo">
+                        <button class="close-sidebar" id="close-sidebar" aria-label="Chiudi menu">&times;</button>
+                    </div>
+                    <ul class="sidebar-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="modelli.html">Modelli</a></li>
+                        <li><a href="fuoriserie.html">Fuoriserie</a></li>
+                        <li><a href="contatti.html">Contatti</a></li>
+                    </ul>
+                </nav>
         <section class="home-intro fade-in">
             <h2>Il Futuro della Guida</h2>
             <p>Siamo pionieri nella progettazione di veicoli che fondono design mozzafiato, tecnologia all'avanguardia e performance senza compromessi. Ogni nostra auto è un'opera d'arte.</p>
+        </section>
+        <section class="home-cards fade-in">
+            <a href="modelli.html" class="modello-item modello-link">
+                <div class="modello-main">
+                    <img src="immagini/DYNORA CONCEPT BOSCO FRONTE.jpg" alt="Modelli di Serie" class="modello-preview-img big-img">
+                    <div class="modello-info">
+                        <h3>Modelli di Serie</h3>
+                        <p>Scopri la gamma completa DEMI Motors</p>
+                    </div>
+                </div>
+            </a>
+            <a href="fuoriserie.html" class="modello-item modello-link">
+                <div class="modello-main">
+                    <img src="immagini/SCLM.jpg" alt="Fuoriserie" class="modello-preview-img big-img">
+                    <div class="modello-info">
+                        <h3>Fuoriserie</h3>
+                        <p>Personalizza la tua auto unica</p>
+                    </div>
+                </div>
+            </a>
         </section>
         <footer>
             <p>&copy; 2025 Brand Automobilistico. Tutti i diritti riservati.</p>
@@ -49,6 +88,34 @@
             <a class="modal-next">&#10095;</a>
         </div>
     </div>
+    <style>
+        .home-cards {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            margin: 48px 0 32px 0;
+        }
+        .home-cards .modello-item {
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: flex-start !important;
+            min-width: 320px;
+            text-align: center;
+            margin-bottom: 0;
+        }
+        .home-cards .modello-main {
+            flex-direction: column !important;
+            align-items: center !important;
+            gap: 0 !important;
+        }
+        @media (max-width: 900px) {
+            .home-cards {
+                flex-direction: column;
+                gap: 24px;
+                align-items: center;
+            }
+        }
+    </style>
     <script src="script.js"></script>
 </body>
 </html>

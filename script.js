@@ -1,4 +1,32 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // =============================================
+    // Burger menu & mobile sidebar navigation
+    // =============================================
+    const burgerMenu = document.getElementById('burger-menu');
+    const mobileSidebar = document.getElementById('mobile-sidebar');
+    const closeSidebar = document.getElementById('close-sidebar');
+
+    if (burgerMenu && mobileSidebar) {
+        burgerMenu.addEventListener('click', function(e) {
+            mobileSidebar.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+    if (closeSidebar && mobileSidebar) {
+        closeSidebar.addEventListener('click', function(e) {
+            mobileSidebar.classList.remove('open');
+            document.body.style.overflow = '';
+        });
+    }
+    // Close sidebar when clicking outside
+    document.addEventListener('click', function(e) {
+        if (mobileSidebar && mobileSidebar.classList.contains('open')) {
+            if (!mobileSidebar.contains(e.target) && e.target !== burgerMenu) {
+                mobileSidebar.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+        }
+    });
 
     // =========================================================
     // 1. LOGICA SEQUENZA VIDEO HEADER
