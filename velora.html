@@ -28,44 +28,70 @@
         }
         .image-row {
             display: flex;
-            gap: 20px;
+            gap: 28px;
             flex-wrap: wrap;
             justify-content: center;
+            align-items: center;
+            margin-bottom: 18px;
         }
         .image-row img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 240px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 14px;
+            box-shadow: 0 8px 32px rgba(44,0,63,0.18);
+            transition: transform 0.25s cubic-bezier(.77,0,.18,1), box-shadow 0.25s;
+            background: #1a0028;
+            border: 3px solid #bfff00;
+        }
+        .image-row img:hover {
+            transform: scale(1.13);
+            box-shadow: 0 16px 48px #32CD32;
+            z-index: 2;
+        }
+        @media (max-width: 900px) {
+            .image-row img {
+                width: 98vw;
+                height: auto;
+                max-width: 340px;
+                margin-bottom: 12px;
+            }
+            .image-row {
+                gap: 12px;
+            }
         }
     </style>
 </head>
 <body>
+    <header class="topbar new-topbar">
+        <nav class="topbar-nav">
+            <div class="nav-left">
+                <a href="modelli.html" class="topbar-link active">Modelli</a>
+                <a href="fuoriserie.html" class="topbar-link">Fuoriserie</a>
+            </div>
+            <a href="index.html" class="topbar-logo-center">
+                <img src="immagini/demi_logo.jpg" alt="Logo DEMI Motors" class="topbar-logo">
+                <span class="topbar-title">DEMI</span>
+            </a>
+            <div class="nav-right">
+                <a href="contatti.html" class="topbar-link">Contatti</a>
+            </div>
+        </nav>
+    </header>
     <div id="velora" class="page active">
         <header class="main-header home-header">
             <video autoplay muted loop playsinline class="header-video">
-                <source src="video/VELORA BACK.mp4" type="video/mp4">
+                <source src="video/VELORA back.mp4" type="video/mp4">
                 Il tuo browser non supporta il tag video.
             </video>
-            <h1>DEMI VELORA</h1>
+            <div class="logo-container" style="display:flex;flex-direction:column;align-items:center;">
+                <img src="immagini/demi_logo.jpg" alt="Logo DEMI Motors" class="logo">
+                <h1 style="text-align:center;margin-top:0.5rem;">DEMI VELORA</h1>
+            </div>
         </header>
         <nav class="main-nav">
             <a href="index.html" class="nav-link">Home</a>
-            <a href="modelli.html" class="nav-link">Panoramica</a>
-            <div class="dropdown">
-                <a href="#" class="nav-link active">Tutti i Modelli</a>
-                <div class="dropdown-content">
-                    <a href="velora.html">Velora</a>
-                    <a href="nevora.html">Nevora</a>
-                    <a href="mythoma.html">Mythoma</a>
-                    <a href="aurora.html">Aurora</a>
-                    <a href="es5.html">ES5</a>
-                    <a href="sb5.html">SB5</a>
-                    <a href="es7.html">ES7</a>
-                    <a href="es7_track.html">ES7 Track</a>
-                    <a href="sc7.html">SC7</a>
-                </div>
-            </div>
+            <a href="modelli.html" class="nav-link">Modelli</a>
             <a href="fuoriserie.html" class="nav-link">Fuoriserie</a>
             <a href="contatti.html" class="nav-link">Contatti</a>
         </nav>
@@ -74,14 +100,14 @@
             <div class="model-grid">
                 <div class="image-gallery-container">
                     <div class="image-container active" data-color="bianco">
-                        <img src="immagini/VELORA FRONTALE BIANCO.jpg" alt="Velora - Vista Frontale Bianca" class="active">
-                        <img src="immagini/VELORA RETRO BIANCO.jpg" alt="Velora - Vista Posteriore Bianca">
-                        <img src="immagini/VELORA LATERALE BIANCO.jpg" alt="Velora - Vista Laterale Bianca">
+                        <img src="immagini/VELORA FRONTALE BIANCO.jpg" alt="Velora - Vista Frontale Bianca" class="active" onclick="zoomGalleryImg(this)">
+                        <img src="immagini/VELORA RETRO BIANCO.jpg" alt="Velora - Vista Posteriore Bianca" onclick="zoomGalleryImg(this)">
+                        <img src="immagini/VELORA LATERALE BIANCO.jpg" alt="Velora - Vista Laterale Bianca" onclick="zoomGalleryImg(this)">
                     </div>
                     <div class="image-container" data-color="nero">
-                        <img src="immagini/VELORA FRONTALE NERO.jpg" alt="Velora - Vista Frontale Nera">
-                        <img src="immagini/VELORA RETRO NERO.jpg" alt="Velora - Vista Posteriore Nera">
-                        <img src="immagini/VELORA LATERALE NERO.jpg" alt="Velora - Vista Laterale Nera">
+                        <img src="immagini/VELORA FRONTALE NERO.jpg" alt="Velora - Vista Frontale Nera" onclick="zoomGalleryImg(this)">
+                        <img src="immagini/VELORA RETRO NERO.jpg" alt="Velora - Vista Posteriore Nera" onclick="zoomGalleryImg(this)">
+                        <img src="immagini/VELORA LATERALE NERO.jpg" alt="Velora - Vista Laterale Nera" onclick="zoomGalleryImg(this)">
                     </div>
                     <div class="gallery-controls">
                         <button class="gallery-prev">&#10094;</button>
@@ -124,12 +150,12 @@
                 <h2>Design e Caratteristiche Esterne</h2>
                 <p>La Velora si distingue per le sue linee pulite e moderne che fondono eleganza e sportività. I fari a LED a tutta larghezza, sia anteriori che posteriori, creano una firma luminosa inconfondibile e proiettano un senso di avanzamento tecnologico. I cerchi in lega bicolore e le pinze freno rosse sottolineano il carattere dinamico del veicolo, mentre il profilo aerodinamico del tetto nero e dello spoiler posteriore non solo migliorano le prestazioni, ma aggiungono anche un tocco di classe distintivo.</p>
                 <div class="image-row">
-                    <img src="immagini/VELORA FRONTALE BIANCO.jpg" alt="Velora Vista Frontale Bianca">
-                    <img src="immagini/VELORA RETRO BIANCO.jpg" alt="Velora Vista Posteriore Bianca">
-                    <img src="immagini/VELORA LATERALE BIANCO.jpg" alt="Velora Profilo Bianco">
-                    <img src="immagini/VELORA FRONTALE NERO.jpg" alt="Velora Vista Frontale Nera">
-                    <img src="immagini/VELORA RETRO NERO.jpg" alt="Velora Vista Posteriore Nera">
-                    <img src="immagini/VELORA LATERALE NERO.jpg" alt="Velora Profilo Nero">
+                    <img src="immagini/VELORA FRONTALE BIANCO.jpg" alt="Velora Vista Frontale Bianca" onclick="zoomGalleryImg(this)">
+                    <img src="immagini/VELORA RETRO BIANCO.jpg" alt="Velora Vista Posteriore Bianca" onclick="zoomGalleryImg(this)">
+                    <img src="immagini/VELORA LATERALE BIANCO.jpg" alt="Velora Profilo Bianco" onclick="zoomGalleryImg(this)">
+                    <img src="immagini/VELORA FRONTALE NERO.jpg" alt="Velora Vista Frontale Nera" onclick="zoomGalleryImg(this)">
+                    <img src="immagini/VELORA RETRO NERO.jpg" alt="Velora Vista Posteriore Nera" onclick="zoomGalleryImg(this)">
+                    <img src="immagini/VELORA LATERALE NERO.jpg" alt="Velora Profilo Nero" onclick="zoomGalleryImg(this)">
                 </div>
             </div>
         </section>
@@ -141,8 +167,8 @@
                 <h2>Powertrain e Meccanica</h2>
                 <p>Sotto il cofano, la Velora nasconde un cuore potente e tecnologicamente avanzato. Il suo powertrain ibrido combina un motore a combustione interna con componenti elettrici per offrire un equilibrio ottimale tra efficienza e prestazioni. La disposizione chiara e accessibile dei vari componenti meccanici, come il motore turbo, il sistema di scarico e l'innovativa trasmissione, dimostra l'ingegneria di precisione che sta alla base di ogni veicolo Velora. I freni a disco ventilati garantiscono una frenata sicura e reattiva in ogni condizione di guida.</p>
                 <div class="image-row">
-                    <img src="immagini/VELORA POWERTRAIN.jpg" alt="Velora Powertrain">
-                    <img src="immagini/VELORA VANO MOTORE.jpg" alt="Velora Vano Motore">
+                    <img src="immagini/VELORA POWERTRAIN.jpg" alt="Velora Powertrain" onclick="zoomGalleryImg(this)">
+                    <img src="immagini/VELORA VANO MOTORE.jpg" alt="Velora Vano Motore" onclick="zoomGalleryImg(this)">
                 </div>
             </div>
         </section>
@@ -154,7 +180,7 @@
                 <h2>Comfort e Lusso degli Interni</h2>
                 <p>Entrando nell'abitacolo, si viene accolti da un ambiente di lusso e raffinatezza. I sedili sportivi bicolore, con finiture in pelle e cuciture a contrasto, offrono un supporto eccezionale e un comfort di lunga durata. Il tetto panoramico in vetro inonda l'abitacolo di luce naturale, creando un'atmosfera spaziosa e aperta. Il design minimalista della plancia è arricchito da dettagli cromati e un'illuminazione ambientale discreta. I sedili posteriori, pur mantenendo un design sportivo, garantiscono spazio sufficiente per i passeggeri, rendendo la Velora una gran turismo pratica per ogni viaggio.</p>
                 <div class="image-row">
-                    <img src="immagini/VELORA INTERNO BIANCO RETRO.jpg" alt="Velora Interni Posteriori">
+                    <img src="immagini/VELORA INTERNO BIANCO RETRO.jpg" alt="Velora Interni Posteriori" onclick="zoomGalleryImg(this)">
                 </div>
             </div>
         </section>
@@ -166,7 +192,7 @@
                 <h2>Spazio e Versatilità</h2>
                 <p>Nonostante la sua linea sportiva, la Velora non scende a compromessi in termini di praticità. L'ampio vano bagagli, accessibile tramite un portellone elettrico, offre una capacità sorprendente per le sue dimensioni, perfetta per gite fuori porta o per l'uso quotidiano. La soglia di carico bassa e il design intelligente massimizzano la facilità d'uso, dimostrando che stile e funzionalità possono coesistere in perfetta armonia.</p>
                 <div class="image-row">
-                    <img src="immagini/VELORA VANO BAGAGLI.jpg" alt="Velora Vano Bagagli">
+                    <img src="immagini/VELORA VANO BAGAGLI.jpg" alt="Velora Vano Bagagli" onclick="zoomGalleryImg(this)">
                 </div>
             </div>
         </section>
@@ -178,10 +204,10 @@
                 <h2>Velora Concept</h2>
                 <p>La Velora non è solo un'auto, ma un'espressione di stile e visione. Le immagini del concept la mostrano nel suo elemento naturale, fondendo il design futuristico con scenari mozzafiato, come le coste baciate dal sole e le eleganti strade cittadine. Ogni dettaglio è studiato per creare un'esperienza visiva che cattura l'immaginazione e proietta la Velora oltre il semplice concetto di veicolo.</p>
                 <div class="image-row">
-                    <img src="immagini/VELORA FRONTALE CONCEPT NERO.jpg" alt="Velora Concept Nera in esterna">
-                    <img src="immagini/VELORA RETRO CONCEPT NERO.jpg" alt="Velora Concept Nera in esterna">
-                    <img src="immagini/VELORA FRONTALE CONCEPT BIANCO.jpg" alt="Velora Concept Bianca in esterna">
-                    <img src="immagini/VELORA RETRO CONCEPT BIANCO.jpg" alt="Velora Concept Bianca in esterna">
+                    <img src="immagini/VELORA FRONTALE CONCEPT NERO.jpg" alt="Velora Concept Nera in esterna" onclick="zoomGalleryImg(this)">
+                    <img src="immagini/VELORA RETRO CONCEPT NERO.jpg" alt="Velora Concept Nera in esterna" onclick="zoomGalleryImg(this)">
+                    <img src="immagini/VELORA FRONTALE CONCEPT BIANCO.jpg" alt="Velora Concept Bianca in esterna" onclick="zoomGalleryImg(this)">
+                    <img src="immagini/VELORA RETRO CONCEPT BIANCO.jpg" alt="Velora Concept Bianca in esterna" onclick="zoomGalleryImg(this)">
                 </div>
             </div>
         </section>
@@ -200,5 +226,4 @@
     </div>
     <script src="script.js"></script>
 </body>
-
 </html>

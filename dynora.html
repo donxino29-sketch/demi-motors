@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demi Dynora - SUV Coupé ad Alte Prestazioni</title>
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        .section {
+            padding: 80px 0;
+            text-align: center;
+        }
+        .section-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .section p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+        .image-row {
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+        .image-row img {
+            width: 240px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 14px;
+            box-shadow: 0 8px 32px rgba(44,0,63,0.18);
+            transition: transform 0.25s cubic-bezier(.77,0,.18,1), box-shadow 0.25s;
+            background: #1a0028;
+            border: 3px solid #bfff00;
+        }
+        .image-row img:hover {
+            transform: scale(1.13);
+            box-shadow: 0 16px 48px #32CD32;
+            z-index: 2;
+        }
+        @media (max-width: 900px) {
+            .image-row img {
+                width: 98vw;
+                height: auto;
+                max-width: 340px;
+                margin-bottom: 12px;
+            }
+            .image-row {
+                gap: 12px;
+            }
+        }
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+            text-align: left;
+        }
+        .spec-item {
+            background: #333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .spec-item strong {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <header class="topbar new-topbar">
+        <nav class="topbar-nav">
+            <div class="nav-left">
+                <a href="modelli.html" class="topbar-link active">Modelli</a>
+                <a href="fuoriserie.html" class="topbar-link">Fuoriserie</a>
+            </div>
+            <a href="index.html" class="topbar-logo-center">
+                <img src="immagini/demi_logo.jpg" alt="Logo DEMI Motors" class="topbar-logo">
+                <span class="topbar-title">DEMI</span>
+            </a>
+            <div class="nav-right">
+                <a href="contatti.html" class="topbar-link">Contatti</a>
+            </div>
+        </nav>
+    </header>
+    <div id="dynora" class="page active">
+        <header class="main-header home-header">
+            <video autoplay muted loop playsinline class="header-video">
+                <source src="video/DYNORA CAVA.mp4" type="video/mp4">
+                Il tuo browser non supporta il tag video.
+            </video>
+            <div class="logo-container" style="display:flex;flex-direction:column;align-items:center;">
+                <img src="immagini/demi_logo.jpg" alt="Logo DEMI Motors" class="logo">
+                <h1 style="text-align:center;margin-top:0.5rem;">DEMI DYNORA</h1>
+            </div>
+        </header>
+
+        <section class="modello-auto fade-in">
+            <div class="model-grid">
+                <div class="image-gallery-container">
+                    <div class="image-container active" data-color="grigio">
+                        <img src="immagini/DYNORA GRIGIO DAVANTI.jpg" alt="Dynora Grigio Davanti" class="active" data-index="0">
+                        <img src="immagini/DYNORA GRIGIO DIETRO.jpg" alt="Dynora Grigio Dietro" data-index="1">
+                        <img src="immagini/DYNORA GRIGIO FRONTE.jpg" alt="Dynora Grigio Fronte" data-index="2">
+                        <img src="immagini/DYNORA GRIGIO LATO.jpg" alt="Dynora Grigio Lato" data-index="3">
+                        <img src="immagini/DYNORA GRIGIO RETRO.jpg" alt="Dynora Grigio Retro" data-index="4">
+                    </div>
+                    <div class="image-container" data-color="verde">
+                        <img src="immagini/DYNORA VERDE DAVANTI.jpg" alt="Dynora Verde Davanti" class="active" data-index="0">
+                        <img src="immagini/DYNORA VERDE DIETRO.jpg" alt="Dynora Verde Dietro" data-index="1">
+                        <img src="immagini/DYNORA VERDE FRONTE.jpg" alt="Dynora Verde Fronte" data-index="2">
+                        <img src="immagini/DYNORA VERDE LATO.jpg" alt="Dynora Verde Lato" data-index="3">
+                        <img src="immagini/DYNORA VERDE RETRO.jpg" alt="Dynora Verde Retro" data-index="4">
+                    </div>
+                    <div class="image-container" data-color="rosso">
+                        <img src="immagini/DYNORA ROSSO DAVANTI.jpg" alt="Dynora Rosso Davanti" class="active" data-index="0">
+                        <img src="immagini/DYNORA ROSSO DIETRO.jpg" alt="Dynora Rosso Dietro" data-index="1">
+                        <img src="immagini/DYNORA ROSSO FRONTE.jpg" alt="Dynora Rosso Fronte" data-index="2">
+                        <img src="immagini/DYNORA ROSSO LATO.jpg" alt="Dynora Rosso Lato" data-index="3">
+                        <img src="immagini/DYNORA ROSSO RETRO.jpg" alt="Dynora Rosso Retro" data-index="4">
+                    </div>
+                    <div class="image-container" data-color="giallo">
+                        <img src="immagini/DYNORA GIALLO DAVANTI.jpg" alt="Dynora Giallo Davanti" class="active" data-index="0">
+                        <img src="immagini/DYNORA GIALLO DIETRO.jpg" alt="Dynora Giallo Dietro" data-index="1">
+                        <img src="immagini/DYNORA GIALLO FRONTE.jpg" alt="Dynora Giallo Fronte" data-index="2">
+                        <img src="immagini/DYNORA GIALLO LATO.jpg" alt="Dynora Giallo Lato" data-index="3">
+                        <img src="immagini/DYNORA GIALLO RETRO.jpg" alt="Dynora Giallo Retro" data-index="4">
+                    </div>
+                    <div class="image-container" data-color="nero">
+                        <img src="immagini/DYNORA NERO DAVANTI.jpg" alt="Dynora Nero Davanti" class="active" data-index="0">
+                        <img src="immagini/DYNORA NERO DIETRO.jpg" alt="Dynora Nero Dietro" data-index="1">
+                        <img src="immagini/DYNORA NERO FRONTE.jpg" alt="Dynora Nero Fronte" data-index="2">
+                        <img src="immagini/DYNORA NERO LATO.jpg" alt="Dynora Nero Lato" data-index="3">
+                        <img src="immagini/DYNORA NERO RETRO.jpg" alt="Dynora Nero Retro" data-index="4">
+                    </div>
+                    <div class="color-options">
+                        <button class="btn-color active" data-target="grigio"></button>
+                        <button class="btn-color" data-target="verde"></button>
+                        <button class="btn-color" data-target="rosso"></button>
+                        <button class="btn-color" data-target="giallo"></button>
+                        <button class="btn-color" data-target="nero"></button>
+                    </div>
+                    <div class="gallery-controls">
+                        <button class="gallery-prev">&#10094;</button>
+                        <button class="gallery-next">&#10095;</button>
+                    </div>
+                </div>
+                <div class="info-container">
+                    <h2>Demi Dynora</h2>
+                    <p class="car-tagline">Il SUV coupé che ridefinisce lo stile e la potenza.</p>
+                    <div class="specs-grid">
+                        <div class="spec-item">
+                            <strong>Architettura</strong>
+                            <span>SUV Coupé 5 Porte</span>
+                        </div>
+                        <div class="spec-item">
+                            <strong>Motore</strong>
+                            <span>3.0 6 cilindri in linea biturbo</span>
+                        </div>
+                        <div class="spec-item">
+                            <strong>Potenza Max</strong>
+                            <span>430 CV</span>
+                        </div>
+                        <div class="spec-item">
+                            <strong>Trazione</strong>
+                            <span>Integrale</span>
+                        </div>
+                        <div class="spec-item">
+                            <strong>0-100 km/h</strong>
+                            <span>4.2 secondi</span>
+                        </div>
+                        <div class="spec-item">
+                            <strong>Velocità Max</strong>
+                            <span>265 km/h</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        ---
+
+        <section class="section concept-section" id="concept">
+            <div class="section-content">
+                <h2>Dynora Concept</h2>
+                <div class="image-row">
+                    <img src="immagini/DYNORA CONCEPT BOSCO FRONTE.jpg" alt="Dynora Concept Bosco Fronte" class="gallery-img" onclick="zoomGalleryImg(this)">
+                    <img src="immagini/DYNORA CONCEPT CAVA.jpg" alt="Dynora Concept Cava" class="gallery-img" onclick="zoomGalleryImg(this)">
+                    <img src="immagini/DYNORA CONCEPT BOSCO RETRO.jpg" alt="Dynora Concept Bosco Retro" class="gallery-img" onclick="zoomGalleryImg(this)">
+                </div>
+            </div>
+        </section>
+
+        ---
+
+        <section class="section interni-section" id="interni">
+            <div class="section-content">
+                <h2>Abitacolo: Lusso e Tecnologia</h2>
+                <p>L'interno della Dynora è pensato per offrire comfort e innovazione. Illuminazione RGB, sedili sportivi in pelle, display digitale e materiali premium creano un ambiente raffinato e personalizzabile. Il vano bagagli è ampio e modulare, perfetto per ogni esigenza.</p>
+                <div class="image-row">
+                    <img src="immagini/DYNORA INTERNO BACK.jpg" alt="Dynora Interno Back" class="gallery-img" onclick="zoomGalleryImg(this)">
+                    <img src="immagini/DYNORA INTERNO RGB.jpg" alt="Dynora Interno RGB" class="gallery-img" onclick="zoomGalleryImg(this)">
+                    <img src="immagini/DYNORA INTERNO.jpg" alt="Dynora Interno" class="gallery-img" onclick="zoomGalleryImg(this)">
+                    <img src="immagini/DYNORA VANO BAGAGLI 1.jpg" alt="Dynora Vano Bagagli 1" class="gallery-img" onclick="zoomGalleryImg(this)">
+                    <img src="immagini/DYNORA VANO BAGAGLI.jpg" alt="Dynora Vano Bagagli" class="gallery-img" onclick="zoomGalleryImg(this)">
+                </div>
+            </div>
+        </section>
+
+        ---
+
+        <section class="section powertrain-section" id="powertrain">
+            <div class="section-content">
+                <h2>Motore & Powertrain</h2>
+                <p>Il cuore della Dynora è il 3.0 biturbo 6 cilindri in linea, abbinato alla trazione integrale intelligente. Il vano motore è curato nei minimi dettagli, con componenti in alluminio e fibra di carbonio. Il powertrain garantisce prestazioni elevate e consumi contenuti, grazie a una gestione elettronica avanzata.</p>
+                <div class="image-row">
+                    <img src="immagini/DYNORA VANO MOTORE.jpg" alt="Dynora Vano Motore" class="gallery-img" onclick="zoomGalleryImg(this)">
+                    <img src="immagini/DYNORA POWERTRAIN.jpg" alt="Dynora Powertrain" class="gallery-img" onclick="zoomGalleryImg(this)">
+                </div>
+            </div>
+        </section>
+
+        ---
+
+        <footer>
+            <p>&copy; 2025 Demi Automobili - Dynora. Tutti i diritti riservati.</p>
+        </footer>
+    </div>
+    
+    <div id="media-modal" class="modal">
+        <span class="modal-close">&times;</span>
+        <div class="modal-content"></div>
+        <div class="modal-nav">
+            <a class="modal-prev">&#10094;</a>
+            <a class="modal-next">&#10095;</a>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

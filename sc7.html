@@ -7,38 +7,80 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="sc7" class="page active">
-        <nav class="main-nav">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="modelli.html" class="nav-link">Panoramica</a>
-            <div class="dropdown">
-                <a href="#" class="nav-link active">Tutti i Modelli</a>
-                <div class="dropdown-content">
-                    <a href="velora.html">Velora</a>
-                    <a href="nevora.html">Nevora</a>
-                    <a href="mythoma.html">Mythoma</a>
-                    <a href="aurora.html">Aurora</a>
-                    <a href="es5.html">ES5</a>
-                    <a href="sb5.html">SB5</a>
-                    <a href="es7.html">ES7</a>
-                    <a href="es7_track.html">ES7 Track</a>
-                    <a href="sc7.html">SC7</a>
-                </div>
+    <header class="topbar new-topbar">
+        <nav class="topbar-nav">
+            <div class="nav-left">
+                <a href="modelli.html" class="topbar-link active">Modelli</a>
+                <a href="fuoriserie.html" class="topbar-link">Fuoriserie</a>
             </div>
-            <a href="fuoriserie.html" class="nav-link">Fuoriserie</a>
-            <a href="contatti.html" class="nav-link">Contatti</a>
+            <a href="index.html" class="topbar-logo-center">
+                <img src="immagini/demi_logo.jpg" alt="Logo DEMI Motors" class="topbar-logo">
+                <span class="topbar-title">DEMI</span>
+            </a>
+            <div class="nav-right">
+                <a href="contatti.html" class="topbar-link">Contatti</a>
+            </div>
         </nav>
+    </header>
+    <div id="sc7" class="page active">
+        <header class="main-header home-header">
+            <div class="logo-container" style="display:flex;flex-direction:column;align-items:center;">
+                <img src="immagini/demi_logo.jpg" alt="Logo DEMI Motors" class="logo">
+                <h1 style="text-align:center;margin-top:0.5rem;">SC7</h1>
+            </div>
+        </header>
         <section class="modello-auto fade-in">
             <div class="model-grid">
                 <div class="image-gallery-container">
                     <div class="image-container active" data-color="scura">
-                        <img src="immagini/sc7 fronte.jpg" alt="SC7 - Frontale Scura" class="active">
-                        <img src="immagini/sc7 retro.jpg" alt="SC7 - Posteriore Scura">
-                        <img src="immagini/SC7 INTERNI SCURI.jpeg" alt="SC7 - Interni Scuri">
+                        <img src="immagini/sc7 fronte.jpg" alt="SC7 - Frontale Scura" class="active" onclick="zoomGalleryImg(this)">
+                        <img src="immagini/sc7 retro.jpg" alt="SC7 - Posteriore Scura" onclick="zoomGalleryImg(this)">
+                        <img src="immagini/SC7 INTERNI SCURI.jpeg" alt="SC7 - Interni Scuri" onclick="zoomGalleryImg(this)">
                     </div>
                     <div class="image-container" data-color="bianca">
-                        <img src="immagini/SC7 TRACK FRONTALE BIANCO.jpg" alt="SC7 - Frontale Bianca" class="active">
-                        <img src="immagini/SC7 INTERNI BIANCHI.jpeg" alt="SC7 - Interni Bianchi">
+                        <img src="immagini/SC7 TRACK FRONTALE BIANCO.jpg" alt="SC7 - Frontale Bianca" class="active" onclick="zoomGalleryImg(this)">
+                        <img src="immagini/SC7 INTERNI BIANCHI.jpeg" alt="SC7 - Interni Bianchi" onclick="zoomGalleryImg(this)">
+                    </div>
+                    <style>
+                        .image-container {
+                            display: flex;
+                            gap: 28px;
+                            flex-wrap: wrap;
+                            justify-content: center;
+                            align-items: center;
+                            margin-bottom: 18px;
+                        }
+                        .image-container img {
+                            width: 240px;
+                            height: 150px;
+                            object-fit: cover;
+                            border-radius: 14px;
+                            box-shadow: 0 8px 32px rgba(44,0,63,0.18);
+                            transition: transform 0.25s cubic-bezier(.77,0,.18,1), box-shadow 0.25s;
+                            background: #1a0028;
+                            border: 3px solid #bfff00;
+                        }
+                        .image-container img:hover {
+                            transform: scale(1.13);
+                            box-shadow: 0 16px 48px #32CD32;
+                            z-index: 2;
+                        }
+                        @media (max-width: 900px) {
+                            .image-container img {
+                                width: 98vw;
+                                height: auto;
+                                max-width: 340px;
+                                margin-bottom: 12px;
+                            }
+                            .image-container {
+                                gap: 12px;
+                            }
+                        }
+                    </style>
+                    </div>
+                    <div class="image-container" data-color="bianca">
+                        <img src="immagini/SC7 TRACK FRONTALE BIANCO.jpg" alt="SC7 - Frontale Bianca" class="active" onclick="zoomGalleryImg(this)">
+                        <img src="immagini/SC7 INTERNI BIANCHI.jpeg" alt="SC7 - Interni Bianchi" onclick="zoomGalleryImg(this)">
                     </div>
                     <div class="gallery-controls">
                         <button class="gallery-prev">&#10094;</button>
@@ -46,7 +88,7 @@
                     </div>
                 </div>
                 <div class="info-container">
-                    <h2>SC7</h2>
+                    <!-- Nome già nell'header -->
                     <p class="car-tagline">Un'icona di stile e potenza, pronta a dominare la strada.</p>
                     <div class="specs-grid">
                         <div class="spec-item">

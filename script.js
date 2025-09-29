@@ -60,16 +60,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // 2. LOGICA DELLE GALLERIE IMMAGINI (CODICE PREESISTENTE)
     // =========================================================
 
-    // Funzione per inizializzare le gallerie su ogni sezione
+    // Funzione per inizializzare le gallerie su ogni sezione, inclusa la logica filtro colori Dynora
     function initializeGalleries() {
         const modelloAutoSections = document.querySelectorAll('.modello-auto');
-
         modelloAutoSections.forEach(section => {
             const galleryContainer = section.querySelector('.image-gallery-container');
             if (!galleryContainer) return;
 
-            const colorButtons = section.querySelectorAll('.btn-color');
-            const imageContainers = section.querySelectorAll('.image-container');
+            const colorButtons = galleryContainer.querySelectorAll('.btn-color');
+            const imageContainers = galleryContainer.querySelectorAll('.image-container');
             const prevButton = galleryContainer.querySelector('.gallery-prev');
             const nextButton = galleryContainer.querySelector('.gallery-next');
 
@@ -78,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     container.classList.remove('active');
                     container.querySelectorAll('img').forEach(img => img.classList.remove('active'));
                 });
-                const targetContainer = section.querySelector(`.image-container[data-color="${targetId}"]`);
+                const targetContainer = galleryContainer.querySelector(`.image-container[data-color="${targetId}"]`);
                 if (targetContainer) {
                     targetContainer.classList.add('active');
                     const firstImage = targetContainer.querySelector('img');
@@ -88,15 +87,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
 
+            // Inizializzazione: mostra la gallery del colore attivo o la prima
             if (colorButtons.length > 0) {
-                const activeColorButton = section.querySelector('.btn-color.active');
+                const activeColorButton = galleryContainer.querySelector('.btn-color.active');
                 if (activeColorButton) {
                     showGallery(activeColorButton.getAttribute('data-target'));
                 } else {
                     showGallery(colorButtons[0].getAttribute('data-target'));
                 }
             } else {
-                const firstGallery = section.querySelector('.image-container');
+                const firstGallery = galleryContainer.querySelector('.image-container');
                 if (firstGallery) {
                     firstGallery.classList.add('active');
                     const firstImage = firstGallery.querySelector('img');
@@ -116,32 +116,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (prevButton && nextButton) {
                 prevButton.addEventListener('click', function() {
-                    const activeContainer = section.querySelector('.image-container.active');
+                    const activeContainer = galleryContainer.querySelector('.image-container.active');
                     if (activeContainer) {
                         const activeImage = activeContainer.querySelector('img.active');
-                        const prevImage = activeImage.previousElementSibling;
-                        if (prevImage) {
-                            activeImage.classList.remove('active');
-                            prevImage.classList.add('active');
+                        const imagesInContainer = activeContainer.querySelectorAll('img');
+                        let idx = Array.from(imagesInContainer).indexOf(activeImage);
+                        activeImage.classList.remove('active');
+                        if (idx > 0) {
+                            imagesInContainer[idx - 1].classList.add('active');
                         } else {
-                            activeImage.classList.remove('active');
-                            const imagesInContainer = activeContainer.querySelectorAll('img');
                             imagesInContainer[imagesInContainer.length - 1].classList.add('active');
                         }
                     }
                 });
-
                 nextButton.addEventListener('click', function() {
-                    const activeContainer = section.querySelector('.image-container.active');
+                    const activeContainer = galleryContainer.querySelector('.image-container.active');
                     if (activeContainer) {
                         const activeImage = activeContainer.querySelector('img.active');
-                        const nextImage = activeImage.nextElementSibling;
-                        if (nextImage) {
-                            activeImage.classList.remove('active');
-                            nextImage.classList.add('active');
+                        const imagesInContainer = activeContainer.querySelectorAll('img');
+                        let idx = Array.from(imagesInContainer).indexOf(activeImage);
+                        activeImage.classList.remove('active');
+                        if (idx < imagesInContainer.length - 1) {
+                            imagesInContainer[idx + 1].classList.add('active');
                         } else {
-                            activeImage.classList.remove('active');
-                            activeContainer.firstElementChild.classList.add('active');
+                            imagesInContainer[0].classList.add('active');
                         }
                     }
                 });
@@ -149,9 +147,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+
     // =========================================================
     // 3. LOGICA MODALE PER IMMAGINI E VIDEO (CODICE PREESISTENTE)
     // =========================================================
+
+    // Funzione globale per zoom delle immagini gallery-img
+    window.zoomGalleryImg = function(img) {
+        if (!modal || !modalContent) return;
+        // Trova tutte le immagini gallery-img visibili nella stessa image-row
+        const row = img.closest('.image-row');
+        if (row) {
+            currentGalleryElements = Array.from(row.querySelectorAll('.gallery-img'));
+        } else {
+            currentGalleryElements = [img];
+        }
+        currentMediaIndex = currentGalleryElements.indexOf(img);
+        openModal();
+    };
 
     const modal = document.getElementById('media-modal');
     const modalContent = modal ? modal.querySelector('.modal-content') : null;

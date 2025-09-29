@@ -1,139 +1,87 @@
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelli - Brand Automobilistico</title>
+    <title>Modelli - DEMI Motors</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="modelli" class="page active">
+    <header class="topbar new-topbar">
+        <nav class="topbar-nav">
+            <div class="nav-left">
+                <a href="modelli.html" class="topbar-link active">Modelli</a>
+                <a href="fuoriserie.html" class="topbar-link">Fuoriserie</a>
+            </div>
+            <a href="index.html" class="topbar-logo-center">
+                <img src="immagini/demi_logo.jpg" alt="Logo DEMI Motors" class="topbar-logo">
+                <span class="topbar-title">DEMI</span>
+            </a>
+            <div class="nav-right">
+                <a href="contatti.html" class="topbar-link">Contatti</a>
+            </div>
+        </nav>
+    </header>
         <header class="main-header modelli-header">
             <video class="header-video" autoplay muted loop playsinline>
                 <source src="video/Generated File August 28, 2025 - 1_48PM.mp4" type="video/mp4">
             </video>
-            <h1>I Nostri Modelli</h1>
-            <p>Esplora la nostra gamma di veicoli, progettati per prestazioni e stile.</p>
+            <h1 class="main-title">DEMI MOTORS</h1>
+            <p class="main-subtitle">I Nostri Modelli: eccellenza, stile e innovazione.</p>
         </header>
-        <nav class="main-nav">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="modelli.html" class="nav-link">Panoramica</a>
-            <div class="dropdown">
-                <a href="#" class="nav-link active">Tutti i Modelli</a>
-                <div class="dropdown-content">
-                    <a href="velora.html">Velora</a>
-                    <a href="nevora.html">Nevora</a>
-                    <a href="mythoma.html">Mythoma</a>
-                    <a href="aurora.html">Aurora</a>
-                    <a href="es5.html">ES5</a>
-                    <a href="sb5.html">SB5</a>
-                    <a href="es7.html">ES7</a>
-                    <a href="es7_track.html">ES7 Track</a>
-                    <a href="sc7.html">SC7</a>
-                </div>
-            </div>
-            <a href="fuoriserie.html" class="nav-link">Fuoriserie</a>
-            <a href="contatti.html" class="nav-link">Contatti</a>
-        </nav>
+    <main>
         <section class="modelli-catalogo">
-            <div class="modello-item fade-in">
-                <img src="immagini/VELORA FRONTALE CONCEPT BIANCO.jpg" alt="Velora" class="modello-preview-img">
-                <div class="modello-info">
-                    <h3>Velora</h3>
-                    <p>Eleganza e potenza in un design senza tempo.</p>
-                    <a href="velora.html" class="btn-cta">INFO</a>
+            <a href="velora.html" class="modello-item fade-in modello-row modello-link">
+                <div class="modello-main">
+                    <img src="immagini/VELORA FRONTALE CONCEPT BIANCO.jpg" alt="Velora" class="modello-preview-img big-img">
+                    <div class="modello-info">
+                        <h3>Velora</h3>
+                        <p>Eleganza e potenza in un design senza tempo.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="modello-item fade-in">
-                <img src="immagini/DEMI NEVORA FRONTALE GRIGIO.jpg" alt="Nevora" class="modello-preview-img">
-                <div class="modello-info">
-                    <h3>Nevora</h3>
-                    <p>La berlina ibrida che unisce praticità ed efficienza.</p>
-                    <a href="nevora.html" class="btn-cta">INFO</a>
+            </a>
+            <a href="nevora.html" class="modello-item fade-in modello-row modello-link">
+                <div class="modello-main">
+                    <img src="immagini/DEMI NEVORA FRONTALE GRIGIO.jpg" alt="Nevora" class="modello-preview-img big-img">
+                    <div class="modello-info">
+                        <h3>Nevora</h3>
+                        <p>La berlina ibrida che unisce praticità ed efficienza.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="modello-item fade-in">
-                <img src="immagini/DEMI MYTHOMA VISUALE FRONTALE.jpg" alt="Mythoma" class="modello-preview-img">
-                <div class="modello-info">
-                    <h3>Mythoma</h3>
-                    <p>La Gran Turismo che combina lusso e potenza senza limiti.</p>
-                    <a href="mythoma.html" class="btn-cta">INFO</a>
+            </a>
+            <a href="aurora.html" class="modello-item fade-in modello-row modello-link">
+                <div class="modello-main">
+                    <img src="immagini/AURORA CONCEPT FRONTALE VERDE.jpg" alt="Aurora" class="modello-preview-img big-img">
+                    <div class="modello-info">
+                        <h3>Aurora</h3>
+                        <p>La Shooting Brake che ridefinisce la sportività.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="modello-item fade-in">
-                <img src="immagini/AURORA CONCEPT FRONTALE VERDE.jpg" alt="Aurora" class="modello-preview-img">
-                <div class="modello-info">
-                    <h3>Aurora</h3>
-                    <p>La Shooting Brake che ridefinisce la sportività</p>
-                    <a href="aurora.html" class="btn-cta">INFO</a>
+            </a>
+            <a href="mythora.html" class="modello-item fade-in modello-row modello-link">
+                <div class="modello-main">
+                    <img src="immagini/DEMI MYTHOMA VISUALE FRONTALE.jpg" alt="Mythora" class="modello-preview-img big-img">
+                    <div class="modello-info">
+                        <h3>Mythora</h3>
+                        <p>La Gran Turismo che combina lusso e potenza senza limiti.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="modello-item fade-in">
-                <img src="immagini/ES5 VISIONE RETRO.jpg" alt="DEMI ES5" class="modello-preview-img">
-                <div class="modello-info">
-                    <h3>Demi ES5</h3>
-                    <p>Compatto, sportivo e pronto per la città.</p>
-                    <a href="es5.html" class="btn-cta">INFO</a>
+            </a>
+            <a href="dynora.html" class="modello-item fade-in modello-row modello-link">
+                <div class="modello-main">
+                    <img src="immagini/DYNORA CONCEPT BOSCO FRONTE.jpg" alt="Dynora" class="modello-preview-img big-img">
+                    <div class="modello-info">
+                        <h3>Dynora</h3>
+                        <p>Il nuovo SUV coupé: eleganza, sportività e versatilità.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="modello-item fade-in">
-                <img src="immagini/DEMI SB5 VISIONE FRONTALE.png" alt="DEMI SB5" class="modello-preview-img">
-                <div class="modello-info">
-                    <h3>Demi SB5</h3>
-                    <p>Un SUV elettrico che unisce comfort e avventura.</p>
-                    <a href="sb5.html" class="btn-cta">INFO</a>
-                </div>
-            </div>
-            <div class="modello-item fade-in">
-                <img src="immagini/ES7 VISIONE FRONTALE.png" alt="ES7" class="modello-preview-img">
-                <div class="modello-info">
-                    <h3>ES7</h3>
-                    <p>Un'auto sportiva che combina prestazioni e design futuristico.</p>
-                    <a href="es7.html" class="btn-cta">INFO</a>
-                </div>
-            </div>
-            <div class="modello-item fade-in">
-                <img src="immagini/ES7 TRACK FRONTALE NERO.jpg" alt="ES7 TRACK" class="modello-preview-img">
-                <div class="modello-info">
-                    <h3>ES7 Track</h3>
-                    <p>Progettata per la pista, perfetta per l'avventura.</p>
-                    <a href="es7_track.html" class="btn-cta">INFO</a>
-                </div>
-            </div>
-            <div class="modello-item fade-in">
-                <img src="immagini/sc7 retro.jpg" alt="SC7" class="modello-preview-img">
-                <div class="modello-info">
-                    <h3>SC7</h3>
-                    <p>Un'icona di stile e potenza, pronta a dominare la strada.</p>
-                    <a href="sc7.html" class="btn-cta">INFO</a>
-                </div>
-            </div>
+            </a>
         </section>
-        <section class="concept-section fade-in">
-            <h3>Visione e Concept</h3>
-            <p>Scopri i nostri veicoli del futuro e le loro ispirazioni.</p>
-            <div class="concept-images-scroller">
-                <div class="concept-item">
-                    <img src="immagini/ES5 VISIONE FRONTE.png" alt="Concept ES5">
-                </div>
-                <div class="concept-item">
-                    <img src="immagini/DEMI SB5 VISIONE FRONTALE.png" alt="Concept SB5">
-                </div>
-                <div class="concept-item">
-                    <img src="immagini/ES7 VISIONE RETRO.png" alt="Concept ES7">
-                </div>
-                <div class="concept-item">
-                    <img src="immagini/SC7 TRACK RETRO VISIONE.jpg" alt="Concept SC7 Track">
-                </div>
-                <div class="concept-item">
-                    <img src="immagini/VELORA STRIX RETRO CONCEPT.jpg" alt="Concept Velora Strix">
-                </div>
-            </div>
-        </section>
-        <footer>
-            <p>&copy; 2025 Brand Automobilistico. Tutti i diritti riservati.</p>
-        </footer>
-    </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 DEMI Motors. Tutti i diritti riservati.</p>
+    </footer>
     <div id="media-modal" class="modal">
         <span class="modal-close">&times;</span>
         <div class="modal-content"></div>
@@ -143,5 +91,18 @@
         </div>
     </div>
     <script src="script.js"></script>
+    <script>
+    // Navbar mobile toggle
+    const navToggle = document.getElementById('navbar-mobile-toggle');
+    const mainNav = document.getElementById('main-nav');
+    navToggle.addEventListener('click', function() {
+        mainNav.classList.toggle('open');
+    });
+    document.addEventListener('click', function(e) {
+        if (mainNav.classList.contains('open') && !mainNav.contains(e.target) && e.target !== navToggle) {
+            mainNav.classList.remove('open');
+        }
+    });
+    </script>
 </body>
 </html>

@@ -7,42 +7,43 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="sb5" class="page active">
-        <nav class="main-nav">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="modelli.html" class="nav-link">Panoramica</a>
-            <div class="dropdown">
-                <a href="#" class="nav-link active">Tutti i Modelli</a>
-                <div class="dropdown-content">
-                    <a href="velora.html">Velora</a>
-                    <a href="nevora.html">Nevora</a>
-                    <a href="mythoma.html">Mythoma</a>
-                    <a href="aurora.html">Aurora</a>
-                    <a href="es5.html">ES5</a>
-                    <a href="sb5.html">SB5</a>
-                    <a href="es7.html">ES7</a>
-                    <a href="es7_track.html">ES7 Track</a>
-                    <a href="sc7.html">SC7</a>
-                </div>
+    <header class="topbar new-topbar">
+        <nav class="topbar-nav">
+            <div class="nav-left">
+                <a href="modelli.html" class="topbar-link active">Modelli</a>
+                <a href="fuoriserie.html" class="topbar-link">Fuoriserie</a>
             </div>
-            <a href="fuoriserie.html" class="nav-link">Fuoriserie</a>
-            <a href="contatti.html" class="nav-link">Contatti</a>
+            <a href="index.html" class="topbar-logo-center">
+                <img src="immagini/demi_logo.jpg" alt="Logo DEMI Motors" class="topbar-logo">
+                <span class="topbar-title">DEMI</span>
+            </a>
+            <div class="nav-right">
+                <a href="contatti.html" class="topbar-link">Contatti</a>
+            </div>
         </nav>
+    </header>
+    <div id="sb5" class="page active">
+        <header class="main-header home-header">
+            <div class="logo-container" style="display:flex;flex-direction:column;align-items:center;">
+                <img src="immagini/demi_logo.jpg" alt="Logo DEMI Motors" class="logo">
+                <h1 style="text-align:center;margin-top:0.5rem;">Demi SB5</h1>
+            </div>
+        </header>
         <section class="modello-auto fade-in">
             <div class="model-grid">
                 <div class="image-gallery-container">
                     <div class="image-container active" data-color="grigio">
-                        <img src="immagini/DEMI SB5 FRONTALE GRIGIO.png" alt="Demi SB5 - Frontale Grigio" class="active">
-                        <img src="immagini/DEMI SB5 RETRO GRIGIO.png" alt="Demi SB5 - Posteriore Grigio">
-                        <img src="immagini/DEMI SB5 INTERNI.png" alt="Demi SB5 - Interni">
+                        <img src="immagini/DEMI SB5 FRONTALE GRIGIO.png" alt="Demi SB5 - Frontale Grigio" class="active" onclick="zoomGalleryImg(this)">
+                        <img src="immagini/DEMI SB5 RETRO GRIGIO.png" alt="Demi SB5 - Posteriore Grigio" onclick="zoomGalleryImg(this)">
+                        <img src="immagini/DEMI SB5 INTERNI.png" alt="Demi SB5 - Interni" onclick="zoomGalleryImg(this)">
                     </div>
                     <div class="image-container" data-color="nero">
-                        <img src="immagini/DEMI SB5 FRONTALE NERO.png" alt="Demi SB5 - Frontale Nero" class="active">
-                        <img src="immagini/DEMI SB5 RETRO NERO.png" alt="Demi SB5 - Posteriore Nero">
+                        <img src="immagini/DEMI SB5 FRONTALE NERO.png" alt="Demi SB5 - Frontale Nero" class="active" onclick="zoomGalleryImg(this)">
+                        <img src="immagini/DEMI SB5 RETRO NERO.png" alt="Demi SB5 - Posteriore Nero" onclick="zoomGalleryImg(this)">
                     </div>
                     <div class="image-container" data-color="bianco">
-                        <img src="immagini/DEMI SB5 FRONTALE BIANCO.png" alt="Demi SB5 - Frontale Bianco" class="active">
-                        <img src="immagini/DEMI SB5 RETRO BIANCO.png" alt="Demi SB5 - Posteriore Bianco">
+                        <img src="immagini/DEMI SB5 FRONTALE BIANCO.png" alt="Demi SB5 - Frontale Bianco" class="active" onclick="zoomGalleryImg(this)">
+                        <img src="immagini/DEMI SB5 RETRO BIANCO.png" alt="Demi SB5 - Posteriore Bianco" onclick="zoomGalleryImg(this)">
                     </div>
                     <div class="gallery-controls">
                         <button class="gallery-prev">&#10094;</button>
@@ -50,7 +51,7 @@
                     </div>
                 </div>
                 <div class="info-container">
-                    <h2>Demi SB5</h2>
+                    <!-- Nome già nell'header -->
                     <p class="car-tagline">Un SUV elettrico che unisce comfort e avventura.</p>
                     <div class="specs-grid">
                         <div class="spec-item">
